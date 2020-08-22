@@ -9,5 +9,9 @@ class Hotel extends Model
    protected $fillable = [
         'name', 'photo','price'
     ];
+    public function package($value='')
+    {
+    	return $this->belongsTo('App\Package');
+    }
 }
  

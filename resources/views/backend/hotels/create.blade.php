@@ -13,7 +13,7 @@
 				<div class="col-lg-7"><input type="text" name="name" class=" form-control my-2" value="">
 
 					@error('name')
-					<p class="text-danger">Your name is required</p>
+					<p class="text-danger">Hotel name is required</p>
 					@enderror
 
 				</div>
@@ -22,7 +22,7 @@
 				<div class="col-lg-7"><input type="text" name="price" class=" form-control my-2" value="">
 
 					@error('name')
-					<p class="text-danger">Your price is required</p>
+					<p class="text-danger">Hotel price is required</p>
 					@enderror
 
 				</div>
@@ -31,7 +31,7 @@
 				<div class="col-lg-5" style="padding-left: 200px">Photo:</div>
 				<div class="col-lg-7"><input type="file" name="photo" class="form-control-file my-2"  value="">
 					@error('photo')
-					<p class="text-danger">Your photo is required</p>
+					<p class="text-danger">Hotel photo is required</p>
 					@enderror
 				</div>
 				

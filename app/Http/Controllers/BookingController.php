@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class BookingController extends Controller
 {
@@ -13,7 +14,9 @@ class BookingController extends Controller
      */
     public function index()
     {
-       return view('backend.books.index');
+        
+        $books=Book::all();
+        return view('backend.books.index',compact('books'));
     }
 
     /**
@@ -34,7 +37,29 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bookingArr=json_decode($request->shop_data);
+
+        $total=0;
+        foreach ($bookingArr as $row ) {
+          $total+=($row->price * $row->qty);
+        }
+       $book=new Book;
+       $book->voucherno=uniqid();
+       $book->depature_date=date('Y-m-d');
+       $book->passenger=$request->passenger;
+       $book->user_id=Auth::id();
+       $book->package_id=id();
+       $book->note=$request->notes;
+       $order->total=$total;
+
+       $order->save();//only save into order table
+
+       //save into order _detail
+       foreach ($cartArr as $row) {
+            $order->items()->attach($row->id,['qty'=>$row->qty]);
+       }
+
+       return 'Succesful';
     }
 
     /**

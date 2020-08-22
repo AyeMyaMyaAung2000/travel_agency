@@ -22,18 +22,18 @@
 				<tr>
 					<td>{{$i++}}</td>
 					<td>{{$car->name}}</td>
-					<td><img src="{{asset($car->photo)}}" class="img-fluid" width="100px"></td>
+					<td><img src="{{asset($car->photo)}}" class="img-fluid"  width="150px" height="70px"></td>
 					<td >{{$car->price}}</td>
 					<td>
 						<a href="{{ route ('cars.show',$car->id)}}">
-						<span class="btn btn-warning" >Detail</span>
+						<span class="btn btn-primary" >Detail</span>
 						</a>
 
 						<a href="{{ route ('cars.edit',$car->id)}}"><button class="btn btn-warning">Edit</button></a>
 						<form method="post" action="{{route('cars.destroy',$car->id)}}" onsubmit="return confirm('Are you sure delete?')" class="d-inline-block">	
 							@csrf
 							@method('DELETE')
-							<a href="" ><button class="btn btn-warning">Delete</button></a></td>
+							<a href="" ><button class="btn btn-danger">Delete</button></a></td>
 						</form>
 
 					</tr>

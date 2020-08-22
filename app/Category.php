@@ -9,4 +9,8 @@ class Category extends Model
       protected $fillable = [
         'name', 'photo'
     ];
+     public function packages($value='')
+    {
+    	return $this->hasMany('App\Package');
+    }
 }
