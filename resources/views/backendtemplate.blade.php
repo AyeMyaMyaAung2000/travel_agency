@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Lucky Travel & Tour Agency</title>
+  <link rel="icon" type="text/css" href="backend/images/agency.png">
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -26,14 +27,14 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar" style="color: #5484a8">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Lucky 7</div>
       </a>
 
       <!-- Divider -->
@@ -43,7 +44,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Lucky 7 Travel Agency</span></a>
       </li>
 
       <!-- Divider -->
@@ -70,13 +71,13 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('cars.index')}}" >
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-car-alt"></i>
           <span>Car</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('hotels.index')}}" >
-          <i class="fas fa-fw fa-wrench"></i>
+         <i class="fas fa-hotel"></i>
           <span>Hotel</span>
         </a>
       </li>
@@ -84,21 +85,17 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('books.index')}}" >
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-hand-holding-usd"></i>
           <span>Booking</span>
         </a>
       </li>
-
-
-
-
-      <!-- Divider -->
+       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+    {{--   <div class="sidebar-heading">
         Addons
-      </div>
+      </div> --}}
 
       <!-- Nav Item - Pages Collapse Menu -->
      <!--  <li class="nav-item">
@@ -137,11 +134,12 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 850px; ">
 
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          {{-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
             <i class="fa fa-bars"></i>
+<<<<<<< HEAD
           </button>
 
           <!-- Topbar Search -->
@@ -184,12 +182,18 @@
 
             <!-- Nav Item - Messages -->
             
+=======
+          </button> --}}
+
+>>>>>>> 738ee4ec3e8d4d8b95d0455e7dcde8ee7dbf5e04
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
+            <div class="float-right">
+              <ul>
+            <li class="nav-item dropdown no-arrow flo">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 ">Admin</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -198,8 +202,11 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
+<<<<<<< HEAD
                 
                
+=======
+>>>>>>> 738ee4ec3e8d4d8b95d0455e7dcde8ee7dbf5e04
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -207,8 +214,9 @@
                 </a>
               </div>
             </li>
-
           </ul>
+
+          </div>
 
         </nav>
         <!-- End of Topbar -->

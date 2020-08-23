@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container-fluid">
-		<h2 class="d-inline-block">Hotel List(Table)</h2>
+		<h2 class="d-inline-block" style="text-align: center;">Hotel List(Table)</h2>
 			<a href="{{ route('hotels.create')}}" class="btn btn-success float-right">Add New</a>
 		<table class="table" >
 		<thead>
