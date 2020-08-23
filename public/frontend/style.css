@@ -13,7 +13,7 @@
 }
 
 .menu{
-	 background-image: linear-gradient(to right, #b1d1e3 0%, #0f2547 80%);
+	 background-image: linear-gradient(to right, #b1d1e3 0%, #0f2547 45%);
 	box-shadow: 0 1em 3em 0 rgba(0, 0, 12, .2);
 	opacity: .9;
 	border:#86acc2 solid;
@@ -29,9 +29,12 @@
 	color: #f2b00a;
 	
 }
-/*#mainMenu a{
-	 background-image: linear-gradient(to right, #b1d1e3 0%, #0f2547 80%);
-}*/
+.dropright{
+	background:#0f2547;
+}
+#mainMenu a{
+	background: #0f2547;
+	}
 #mainMenu ul li a{
 	color: #f2b00a;
 	font-family: 'Playfair Display', serif;
@@ -54,14 +57,18 @@
 	line-height: 1.1;
 	font-weight: bold;
 }
+/*.carousel{
+	height: 535px;
+}*/
 .btn-hero{
-	background: #264257;
+	background: #0f2547;
 	color: #fff;
 	animation: skew 3s infinite;
 	animation-direction: normal;
 	transform: skew(1deg);
 	animation-direction: alternate;
 	padding: 5px 17px;
+
 }
 @keyframes skew{
 	0%{
@@ -251,8 +258,9 @@ h2{
   transform: rotateY(-20deg) scale(1.1);
 }
 /*page control*/
-.pagecontrol{
+.pagecontroller{
   border-radius: 25px;
+  height: 65px;
 }
 /*end page control*/
 /*footer*/
@@ -288,8 +296,8 @@ transition-duration: .3s;
 /*end slidebar*/
 /*detail page*/
 .bg{
-	background-image: url(img/background1.jpg);
-	height: 530px;
+	/*background-image: url(img/background1.jpg);*/
+	height: 70px;
 }
 h4{
 	font-family: 'Playfair Display', serif;
@@ -307,5 +315,15 @@ p{
 }
 h5{
 	color: #702d28;
+	font-family: 'Kaushan Script', cursive;
+font-family: 'Playfair Display', serif;
 
+}
+.packagebg{
+	background-image: url(img/kayin.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+.button{
+	background-color: #183266;
 }

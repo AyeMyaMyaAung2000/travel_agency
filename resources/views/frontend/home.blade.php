@@ -1,19 +1,19 @@
 @extends('frontendtemplate')
 @section('carousel')
  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
+   {{--  <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
+    </ol> --}}
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="frontend/img/carousel2.jpg" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
           <h1 data-aos="zoom-in-up">Find a Perfect Deal For Your Next Trip</h1>
-          <p style="font-size: 20px;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <a href="#" class="btn btn-hero py-2 px-4">View packages</a>
+         
+         
         </div>
       </div>
       <div class="carousel-item">
@@ -21,8 +21,7 @@
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
           <h1>find a perfect deal for your next trip</h1>
-          <p style="font-size: 20px;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <a href="#" class="btn btn-hero py-2 px-4">View packages</a>
+         
         </div>
       </div>
       <div class="carousel-item">
@@ -30,8 +29,7 @@
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
           <h1 class="mb-4 text-capitalize">find a perfect deal for your next trip</h1>
-          <p style="font-size: 20px;">vitae elit libero, a pharetra augue mollis interdum.</p>
-          <a href="#" class="btn btn-hero py-2 px-4">View packages</a>
+         
         </div>
       </div>
     </div>
@@ -52,15 +50,7 @@
           <li class="nav-item">
             <p class="nav-link" href="#"><i class="fas fa-angle-double-right"></i></p>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <p class="nav-link" href="#"><i class="fas fa-angle-double-right"></i></p>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
+         
         </ul>
       </div>
     </nav>
@@ -73,10 +63,10 @@
         <div class="row">
           <div class="col-md-12 tab-search">
             <div class="nav nav-pills" id="v-pills-tabs" role="tablist" aria-orientation="vertical">
-              <a href="#v-pills-home" class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Hotels</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crusis</a>
+              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Hotels</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crusis</a>
             </div>
           </div>
           <div class="col-md-3"></div>
@@ -88,19 +78,7 @@
                     <div class="text-field-search one-third">
                       <input type="text" class="form-control" name="" placeholder="search location">
                     </div>
-                    <div class="check-in one-third">
-                      <input type="date" class="form-control" name="" placeholder="check-in date">
-                    </div>
-
-                    <div class="select-wrap one-third">
-                      <select name="" id="" class="form-control">
-                        <option value="">Travel type</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3+</option>
-                      </select>
-                    </div>
-                  </div>
+                   </div>
                   <input type="submit" class="search-submit btn btn-search" value="Search Tour" name="">
                 </form>
               </div>
@@ -158,7 +136,7 @@
     </div> 
     @endforeach
   </div>
-  <a href="#" class="btn btn-outline-info mt-5">see all packages</a>
+  <a href="{{route('packageall')}}" class="btn btn-outline-info mt-5">see all packages</a>
 </div>
 <!-- end book -->
 <!-- item carousel -->
@@ -177,12 +155,7 @@
               <div class="text-center photohover">
                 <div class="card itemcaro" >
                   <img src="{{asset($category->photo)}}" width="250px" height="100px" class="img-fluid card-img-top">
-                  <div class="card-body h-25">
-                   <h5 class="py-3  px-3">{{$category->name}}</h5>
-         
                 </div>
-                <a href="package6.html" class="btn btn-info btn-md">Details</a>
-              </div>
             </div>
             @endforeach
 

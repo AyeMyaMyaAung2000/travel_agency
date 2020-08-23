@@ -44,11 +44,15 @@ Route::get('dashboard', 'BackendController@dashboard'
 // });
 // frontend
 Route::get('/', 'FrontendController@home'
-)->name('home');
-Route::get('package', 'FrontendController@package'
+)->name('index');
+Route::get('package/{id}', 'FrontendController@package'
 )->name('packages');
 Route::get('holiday1', 'FrontendController@holiday1'
 )->name('holiday1');
+Route::get('packageall', 'FrontendController@packageall'
+)->name('packageall');
+
+
 
 
 

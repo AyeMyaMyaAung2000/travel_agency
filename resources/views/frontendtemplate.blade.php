@@ -32,10 +32,10 @@
 
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item colo mx-2 px-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
+          <li class="nav-item colo mx-1 px-2"><a href="{{route('index')}}" class="nav-link">Home</a></li>
           <li class="nav-item  mx-2 mt-2">
             <div class="dropright">
-              <a  href="#" id="menu" class="dropright ">
+              <a  href="#" id="menu" class="dropright mx-1 px-3">
                 Tour Program<i class="fas fa-angle-double-right"></i>
               </a>
 
@@ -47,8 +47,50 @@
             </div>
 
           </li>
-          <li class="nav-item  mx-2 px-2"><a href="about1.html" class="nav-link px-2">ABOUT</a></li>
-          <li class="nav-item  mx-2 px-3"><a href="contact.html" class="nav-link">CONTACT</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
+           <li class="nav-item">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <a href="{{route('profile')}}" class="dropdown-item" >Profile</a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+          </li>
           <div class="view-detail" data-target="#checkModal" data-toggle="modal">
 
           </div>
