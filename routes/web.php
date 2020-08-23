@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 //backend
 // Route::middleware('role:admin')->group(function(){
 
-Route::get('/', 'BackendController@dashboard'
+Route::get('dashboard', 'BackendController@dashboard'
 )->name('dashboard');
 
 Route::resource('packages','PackageController');
@@ -31,10 +31,14 @@ Route::resource('categories','CategoryController');
 
 Route::resource('books','BookingController');
 
-
-
-
 // });
+// frontend
+Route::get('/', 'FrontendController@home'
+)->name('home');
+Route::get('package', 'FrontendController@package'
+)->name('packages');
+Route::get('holiday1', 'FrontendController@holiday1'
+)->name('holiday1');
 
 
 
