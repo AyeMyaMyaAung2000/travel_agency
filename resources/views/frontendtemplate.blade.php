@@ -32,7 +32,7 @@
 
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item colo mx-2 px-3"><a href="" class="nav-link">HOME</a></li>
+          <li class="nav-item colo mx-2 px-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
           <li class="nav-item  mx-2 mt-2">
             <div class="dropright">
               <a  href="#" id="menu" class="dropright ">

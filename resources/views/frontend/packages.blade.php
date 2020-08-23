@@ -31,9 +31,7 @@
 					</div>
 				</div>
 				@endforeach
-
-				
-				
+		
 			</div>
 			<!-- Catego -->
 			<div class="col-lg-3 col-md-12 col-sm-12 mt-3 ">
@@ -141,4 +139,4 @@
       </div>
     </nav>
   </div>
-	@endsection
+@endsection
