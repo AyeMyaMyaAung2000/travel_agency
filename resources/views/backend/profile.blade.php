@@ -1,35 +1,15 @@
 @extends('backendtemplate')
 
 @section('content')
-<div class="col-lg-9">
-	<h2 class="mt-4" style="text-align: center;font-size: 35px;">Profile</h2>
-
+<div class="container col-lg-9" style="background-color: #7a998e;color: black;">
 	<div class="row">
-		<div class="col-lg-6" style="">
-			<img src="frontend/images/register.jpg" class="img-fluid ml-5" >
+		<div class="col-lg-12" style="font-size:25px;">
+			<p style="margin-left: 450px">Name:<strong >{{Auth::user()->name}}</strong></p>
+			<p style="margin-left: 450px;">Email:<strong>{{Auth::user()->email}}</strong></p>
 		</div>
-		<div class="col-lg-6 my-4" style="font-size:25px;">
-			Name:<strong >{{Auth::user()->name}}</strong><br>
-			Email:<strong>{{Auth::user()->email}}</strong><br>
-			</div>
-		<h2 class="my-5">You can change your data!</h2>
-		
-		<div class="col-lg-12">
-			<div class="form-group">
-				Profile:<input type="file" name="name" value="" placeholder="If you change your name,you can change here!" class="form-control-file" >
-			</div>
-			<div class="form-group">
-				Name:<input type="text" name="name" value="{{Auth::user()->name}}" placeholder="If you change your name,you can change here!" class="form-control" style="border-radius: 20px;height: 50px;">
-			</div>
-			<div class="form-group">
-				Email:<input type="text" name="name" value="{{Auth::user()->email}}" placeholder="If you change your email,you can change here!" class="form-control" style="border-radius: 20px;height: 50px;">
-			</div>
-			<div class="form-group">
-				{{-- Address<input type="text" name="name" value="" placeholder="If you change your email,you can change here!" class="form-control" style="border-radius: 20px;height:50px;"> --}}
-				<a href="" class="btn btn-info my-3 float-right" style="border-radius: 30px;width: 150px;height: 50px;font-size: 20px;padding-top: 10px;">Change</a>
-			</div>
+		<div class="col-lg-12 h-25">
+			<img src="backend/images/agency.png" class=" img-fluid" height="30px;">
 		</div>
-
 		
 	</div>
 </div>
