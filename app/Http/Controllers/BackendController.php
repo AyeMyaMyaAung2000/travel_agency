@@ -9,4 +9,9 @@ class BackendController extends Controller
    public function dashboard($value=''){
    	return view('backend.dashboard');
    }
+
+     public function profile($value='')
+    {
+	return view('backend.profile');
+    }
 }
