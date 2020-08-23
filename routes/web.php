@@ -14,27 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 //backend
-// Route::middleware('role:admin')->group(function(){
+Route::middleware('role:admin')->group(function(){
 
-Route::get('/', 'BackendController@dashboard'
-)->name('dashboard');
+	Route::get('dashboard', 'BackendController@dashboard'
+		)->name('dashboard');
 
-Route::resource('packages','PackageController');
+	Route::resource('packages','PackageController');
 
-Route::resource('cars','CarController');
-
-
-Route::resource('hotels','HotelController');
-
-Route::resource('categories','CategoryController');
+	Route::resource('cars','CarController');
 
 
-Route::resource('books','BookingController');
+	Route::resource('hotels','HotelController');
+
+	Route::resource('categories','CategoryController');
+
+
+	Route::resource('books','BookingController');
+
+	Route::get('profile','BackendController@profile')->name('profile');
 
 
 
 
-// });
+});
 
 
 
@@ -48,3 +50,7 @@ Route::resource('books','BookingController');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
