@@ -6,34 +6,13 @@
 @endsection
 @section('welcome')
 <div class="packagebg">
-<div class="container">
-		<h1 class="text-center packtitle">Popular Tour</h1>
+<div class="container-fluid">
+		
 		<div class="row">
 			<!-- Details -->
 			<div class="col-lg-10 col-md-12 col-sm-12">
-				@foreach($packages as $package)
-				<div class="card mt-3 packages">
-					<div class="row">
-						<div class="col-lg-6 col-md-12 col-sm-12 ">
-							<img src="{{asset($package->photo)}}" width="450px" height="300px" class="img-fluid">
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12 text-left">
-							<h4 class="py-3  px-3">{{$package->name}}</h4>
-							<p><i class="fas fa-location-arrow px-2 arr text-warning"></i>Yangon  – Mandalay – Bagan – Inlay</p>
-							<hr class="p-0 m-0">
-							<p><i class="far fa-clock px-2 text-warning"></i>  Duration: {{$package->duration_time}}</p>
-							<hr class="p-0 m-0">
-							<p><i class="fas fa-dollar-sign px-2 text-warning"></i>
-								Price: $<span style="color:red"> {{$package->price}}</span>
-							
-							<a href="package6.html" class="btn text-light mx-5 my-1 px-3  button">Detail</a></p>
-							<hr class="p-0 m-0">
-						</div>
-						
-					</div>
-				</div>
-				@endforeach
 		
+		<h1 class="text-center packtitle">Packages not found !</h1>
 			</div>
 			<!-- Catego -->
 			<div class="col-lg-2 col-md-12 col-sm-12 mt-3 ">

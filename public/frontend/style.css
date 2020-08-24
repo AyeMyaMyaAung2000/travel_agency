@@ -4,7 +4,6 @@
 	top: 0px;
 	width: 100%;
 	z-index: 5;
-
 	height: 70px;
 	transition: top 1s;
 	border-radius: 3px;
@@ -16,7 +15,7 @@
 	 background-image: linear-gradient(to right, #b1d1e3 0%, #0f2547 45%);
 	box-shadow: 0 1em 3em 0 rgba(0, 0, 12, .2);
 	opacity: .9;
-	border:#86acc2 solid;
+	/*border:#86acc2 solid;*/
 	
 }
 .dropright:hover>.dropdown-menu{
@@ -72,10 +71,10 @@
 }
 @keyframes skew{
 	0%{
-		transform: skew(35deg);
+		transform: skew(15deg);
 	}
 	100%{
-		transform: skew(-35deg);
+		transform: skew(-20deg);
 	}
 }
 #carouselExampleCaptions{

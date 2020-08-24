@@ -63,20 +63,21 @@
         <div class="row">
           <div class="col-md-12 tab-search">
             <div class="nav nav-pills" id="v-pills-tabs" role="tablist" aria-orientation="vertical">
-              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Hotels</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 active btn-hero" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crusis</a>
+              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3 btn-hero" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Hotels</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>&nbsp;
+              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crusis</a>
             </div>
           </div>
           <div class="col-md-3"></div>
           <div class="tab-content py-5 col-md-8" id="v-pills-tabContent"> <span>WHERE ARE YOU WANT TO GO?</span>
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
               <div class="block-17">
-                <form class="d-block d-lg-flex">
+                <form class="d-block d-lg-flex" action="{{route('packagesearch')}}" method="post">
+                  @csrf
                   <div class="fields d-block d-lg-flex">
                     <div class="text-field-search one-third">
-                      <input type="text" class="form-control" name="" placeholder="search location">
+                      <input type="text" class="form-control" name="search" placeholder="search packages">
                     </div>
                    </div>
                   <input type="submit" class="search-submit btn btn-search" value="Search Tour" name="">
@@ -95,18 +96,18 @@
     <div class="row img-wrap mb-5 mb-lg-0">
       <div class="col-12">
         <div class="row">
-          <div class="mb-4 margin-lg-0 col-lg-6 order-lg-2">
+          <div class="mb-4 margin-lg-0 col-lg-4 order-lg-2">
             <a href="#" class="effect">
               <img src="frontend/img/1.jpg" class="img-fluid img1">
             </a>
           </div>
-          <div class="col-lg-5 ml-auto align-self-center order-lg-1">
-            <h2 class="text-black">Culture</h2>
-            <p class="mb-4">
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          
+          <div class="col-lg-8 ml-auto align-self-center order-lg-1">
+            <h5 class="text-center p-2">WELCOME TO MYANMAR AND MYANMAR TOURISM SERVICES</h5>
+            <p class="text-center">
+              Mingalarbar! It means "Auspiciousness to you" in Myanmar , the national language. This greeting that is expressed on the faces, mentioned in the appearances in the uncontrollable cordialities of Myanmar people showing the peaceful, friendliness and warm hospitalities of Myanmar, the Golden Land.
+              Myanmar's community peace and tranquility are attractive and enjoyable for traveling and discovering the virgin destinations around Myanmar, respectively. Our professional tour guides are patient, friendly, honest, knowledgeable and well understood for how to conduct an enjoyable and unforgettable valued trip in Myanmar.
+            We are then confident to provide the supreme quality services to our distinguish guests from the every parts of the world as the right and reliable partner in Myanmar.</p>
+
           </div>
         </div>
         
@@ -127,7 +128,8 @@
         <div class="back"></div>
        <!--  <div class="page6 text-dark">hello</div>
         <div class="page5"></div> -->
-        <div class="page4">{{$package->name}}</div>
+        <div class="page4 text-center"><p>{{$package->name}}<br>{{$package->price}}$</p><a href="{{route('holiday1',$package->id)}}" class="btn bg-primary h-25">Detail</a></div>
+
         <div class="page3"><img src="frontend/img/10.jpg" class="img-fluid b"></div>
         <div class="page2"></div>
         <div class="page1"></div>
@@ -136,7 +138,7 @@
     </div> 
     @endforeach
   </div>
-  <a href="{{route('packageall')}}" class="btn btn-outline-info mt-5">see all packages</a>
+  <a href="{{route('packageall')}}" class="btn btn-outline-primary mt-5">see all packages</a>
 </div>
 <!-- end book -->
 <!-- item carousel -->
@@ -145,7 +147,7 @@
  <div class="" style="background-color: #f7f1e4;">
   <div class="container text-center container-fluid" style="background-color:  #f7f1e4">
     <div class="jumbotron jumbotron-fluid" style="background-color:  #f7f1e4">
-      <h1 class="">POPULAR PACKAGES</h1>
+      <h1 class="">POPULAR TOURS</h1>
       <hr class="divider">
       <div class="container">
         <div class="row">
@@ -154,7 +156,7 @@
             	@foreach($categories as $category)
               <div class="text-center photohover">
                 <div class="card itemcaro" >
-                  <img src="{{asset($category->photo)}}" width="250px" height="100px" class="img-fluid card-img-top">
+                  <a href="{{route('packages',$category->id)}}"><img src="{{asset($category->photo)}}" width="250px" height="100px" class="img-fluid card-img-top"></a>
                 </div>
             </div>
             @endforeach

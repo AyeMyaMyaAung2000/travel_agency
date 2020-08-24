@@ -24,8 +24,8 @@
   
   <nav class="navbar navbar-expand-lg m-0 menu" id="scroll">
     <div class="container-fluid">
-
-      <img src="frontend/img/pjlogo.png" class="img-fluid " width="150">
+        <a href="{{route('index')}}">
+      <img src="frontend/img/carlogo.png" class="img-fluid " width="150"></a>
       <button class="navbar-toggler p-0" data-toggle="collapse" data-target="#mainMenu">
         <i class="fas fa-sliders-h button"></i>     
       </button>

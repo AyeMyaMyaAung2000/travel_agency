@@ -51,7 +51,13 @@ Route::get('holiday1', 'FrontendController@holiday1'
 )->name('holiday1');
 Route::get('packageall', 'FrontendController@packageall'
 )->name('packageall');
+Route::any('packagesearch', 'FrontendController@packagesearch'
+)->name('packagesearch');
 
+// packages detail
+
+Route::get('holiday1/{id}', 'FrontendController@holiday1'
+)->name('holiday1');
 
 
 
