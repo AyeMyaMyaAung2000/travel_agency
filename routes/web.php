@@ -36,9 +36,6 @@ Route::get('dashboard', 'BackendController@dashboard'
 
 	Route::get('profile','BackendController@profile')->name('profile');
 
-
-
-
 });
 
 // });
@@ -58,6 +55,9 @@ Route::any('packagesearch', 'FrontendController@packagesearch'
 
 Route::get('holiday1/{id}', 'FrontendController@holiday1'
 )->name('holiday1');
+
+Route::get('booking/{id}','FrontendBookController@index')->name('booking');
+Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
 
 
 

@@ -26,7 +26,7 @@
 							<p><i class="fas fa-dollar-sign px-2 text-warning"></i>
 								Price: $<span style="color:red"> {{$package->price}}</span>
 							
-							<a href="package6.html" class="btn text-light mx-5 my-1 px-3  button">Detail</a></p>
+							<a href="{{route('holiday1',$package->id)}}" class="btn text-light mx-5 my-1 px-3  button">Detail</a></p>
 							<hr class="p-0 m-0">
 						</div>
 						
