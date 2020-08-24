@@ -47,7 +47,7 @@
             </div>
 
           </li>
-          <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="" class="nav-link px-2">About</a></li>
           <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
            <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
