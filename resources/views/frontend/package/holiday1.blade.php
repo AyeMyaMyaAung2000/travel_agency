@@ -15,13 +15,13 @@
 						<p class="nav-link" href="#"><i class="fas fa-angle-double-right"></i></p>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Features</a>
+						<a class="nav-link" href="#">Packages</a>
 					</li>
 					<li class="nav-item">
 						<p class="nav-link" href="#"><i class="fas fa-angle-double-right"></i></p>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Pricing</a>
+						<a class="nav-link" href="#">Detail</a>
 					</li>
 				</ul>
 			</div>
@@ -31,19 +31,19 @@
 	<!-- parallx -->
 
 	<div class="container packtitle">
-		<h4 class="font-weight-bold">MYANMAR HIGHLIGHT TOUR</h4>
+		<h4 class="font-weight-bold">MYANMAR HOLIDAY TOUR</h4>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4"><img src="img/route1.gif" class="img-fluid w-50"></div>
 				<div class="col-md-8">
-					<i class="fas fa-clock text-warning"></i>
-					Duration: 5Days/4Nights<br>
-					<i class="fas fa-location-arrow text-warning"></i>
-					Coverage: Yangon – Bagan – Mandalay – Inle Lake – Yangon<br>
-					<i class="fas fa-dollar-sign text-warning"></i>
-					Price From: $1075<br>
-					<a href="booking.html" class="btn btn-warning">Book This Tour</a>
-					<a href="contactinfo.html" class="btn btn-warning">Enquire</a>
+					<h5><i class="fas fa-clock text-warning"></i>
+					Duration: {{$package->duration_time}}</h5>
+				    <h5><i class="fas fa-location-arrow text-warning"></i>
+					Coverage: {{$package->name}}</h5>
+					<h5><i class="fas fa-dollar-sign text-warning"></i>
+					Price From: ${{$package->price}}</h5>
+					<a href="booking.html" class="btn btn-outline-primary">Book This Tour</a>
+					<a href="contactinfo.html" class="btn btn-outline-dark">Enquire</a>
 				</div>
 			</div>
 		</div>
