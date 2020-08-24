@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg m-0 menu" id="scroll">
     <div class="container-fluid">
         <a href="{{route('index')}}">
-      <img src="frontend/img/carlogo.png" class="img-fluid " width="150"></a>
+      <img src="{{asset('frontend/img/carlogo.png')}}" class="img-fluid " width="150"></a>
       <button class="navbar-toggler p-0" data-toggle="collapse" data-target="#mainMenu">
         <i class="fas fa-sliders-h button"></i>     
       </button>
@@ -121,7 +121,7 @@
   <div class="container">
     <div class="row p-1">
       <div class="col-md-1">
-        <img src="frontend/img/logo.png" class="img-fluid">
+        <img src="{{asset('frontend/img/logo.png')}}" class="img-fluid">
       </div>
       <div class="col-md-4">
        <h4>Contact Info</h4>
@@ -136,13 +136,13 @@
        <div class="row">
         
          <div class="col-md-8">
-           <img src="frontend/img/cbbank.png" class="img-fluid">
+           <img src="{{asset('frontend/img/cbbank.png')}}" class="img-fluid">
          </div>
          <div class="col-md-5">
-           <img src="frontend/img/visa1.png" class="img-fluid w-50">
+           <img src="{{asset('frontend/img/visa1.png')}}" class="img-fluid w-50">
          </div>
           <div class="col-md-4">
-           <img src="frontend/img/kbzpay.png" class="img-fluid w-50">
+           <img src="{{asset('frontend/img/kbzpay.png')}}" class="img-fluid w-50">
          </div>
        </div>
      </div>
@@ -151,6 +151,7 @@
    </div>
  </div>
 </div>
+
 <!-- social -->
 <!-- footer -->
 <footer class="footer">
@@ -164,6 +165,7 @@
 <script type="text/javascript" src="{{asset('frontend/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/slick-master/slick/slick.min.js')}}"></script>
 <script src="{{asset('frontend/dist/aos.js')}}"></script>
+@yield('script')
 
 <script>
   AOS.init({
