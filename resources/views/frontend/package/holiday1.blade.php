@@ -42,8 +42,13 @@
 					Coverage: {{$package->name}}</h5>
 					<h5><i class="fas fa-dollar-sign text-warning"></i>
 					Price From: ${{$package->price}}</h5>
-					<a href="{{route('booking',$package->id)}}" class="btn btn-outline-primary">Book This Tour</a>
-					<a href="contactinfo.html" class="btn btn-outline-dark">Enquire</a>
+					
+					@role('customer')
+					<a href="{{route('booking',$package->id)}}" class="btn btn-outline-dark buy_now">Booking</a>
+					@else
+					<a href="{{route('login')}}" class="btn btn-outline-dark">login to book</a>
+					@endrole
+					
 				</div>
 			</div>
 		</div>
@@ -52,7 +57,7 @@
 	<!-- Package -->
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-12">
 				<h4>Detail Itinetary</h4>
 				<div class="row">
 
@@ -154,12 +159,7 @@
 				<hr class="border-warning">
 				
 			</div>
-			<div class="col-md-3">
-				@foreach($categories as $category)
-				<a href="#"><img src="{{asset($category->photo)}}" class="img-fluid tour p-1"></a>
-				@endforeach
-				
-			</div>
+			
 		</div>
 	</div>
 @endsection

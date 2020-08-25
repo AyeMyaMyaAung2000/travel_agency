@@ -9,60 +9,60 @@ use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
-        public function home($value=''){
-        	$categories=Category::all();
-        	$packages=Package::take(3)->get();
-                return view('frontend.home',compact('categories','packages'));
-        }
-        public function package(Request $request,$id)
-        {
+  public function home($value=''){
+   $categories=Category::all();
+   $packages=Package::take(3)->get();
+   return view('frontend.home',compact('categories','packages'));
+ }
+ public function package(Request $request,$id)
+ {
 
-        	$categories=Category::all();
-         //        dd($categories);
-        	// $packages=Package::find($id);
-               $packages = DB::select('select * from packages where category_id = ?', [$id]);
+   $categories=Category::all();
+
+   $packages = DB::select('select * from packages where category_id = ?', [$id]);
                 // dd($packages);
-               return view('frontend.packages',compact('packages','categories'));
-       }
-       public function packageall($value='')
-       {
+   return view('frontend.packages',compact('packages','categories'));
+ }
+ public function packageall($value='')
+ {
 
-        $categories=Category::all();
-        $packages=Package::all();
-        return view('frontend.packages',compact('packages','categories'));
+  $categories=Category::all();
+  $packages=Package::all();
+  return view('frontend.packages',compact('packages','categories'));
 }
 // searchsection
-       public function packagesearch(Request $request)
-       {
-        $categories=Category::all();
-        $search= $request->search;
-         // dd($search);
-         
-     // $packages = DB::select('select * from packages where name like ?', [$search]);
-     // dd($packages);
-      $packages = Package::where('name','LIKE','%'.$search.'%')->get();
-     
-    if(count($packages) > 0)
-        return view('frontend.packages',compact('packages','categories'));
-    else  return view('frontend.package.notfound',compact('packages','categories'));
+public function packagesearch(Request $request)
+{
+  $categories=Category::all();
+  $search= $request->search; 
+  $packages = Package::where('name','LIKE','%'.$search.'%')->get();
+
+  if(count($packages) > 0)
+    return view('frontend.packages',compact('packages','categories'));
+  else  return view('frontend.package.notfound',compact('packages','categories'));
 }
-// end search
-// public function holiday1($value=''){
-//        $categories=Category::all();
-//        $packages=Package::all();
-//        return view('frontend.package.holiday1',compact('categories','packages'));
-// }
-
-
-// packages detail
-
 public function holiday1($id){
-          $categories=Category::all();
-          $package=Package::find($id);
-                return view('frontend.package.holiday1',compact('categories','package'));
-        }
+  $categories=Category::all();
+  $package=Package::find($id);
+  return view('frontend.package.holiday1',compact('categories','package'));
+}
 
+public function filterpackage($value=''){
+  $categories=Category::all();
+  $packages=Package::all();
+  return view('frontend.filterpackage',compact('categories','packages'));    
+}
 
+public function getitems(Request $request)
+{ $sid=$request->sid; 
+  $item=Package::all();
+ if ($sid==0) {
+  $item=Package::all();
+}else{
+  $item=Category::find($sid)->packages;
+}
+return $item;
+}
 }
 
 

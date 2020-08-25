@@ -3,7 +3,9 @@
 <head>
   <title>travel</title>
   <meta charset="utf-8">
-
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/bootstrap/css/bootstrap.min.css')}}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {{-- <link rel="stylesheet" type="text/css" href="{{asset('frontend/style.css')}}"> --}}
@@ -165,6 +167,7 @@
 <script type="text/javascript" src="{{asset('frontend/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/slick-master/slick/slick.min.js')}}"></script>
 <script src="{{asset('frontend/dist/aos.js')}}"></script>
+
 @yield('script')
 
 <script>

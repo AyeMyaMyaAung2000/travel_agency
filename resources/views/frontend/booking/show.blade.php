@@ -18,6 +18,7 @@
           <div class="offset-3 col-lg-6 my-2">
             <h1>{{ Auth::user()->name }}</h1>
              <h1>{{ Auth::user()->email}}</h1>
+             <a href="#" class="buynow btn btn-outline-secondary">Buy now</a>
             <div id="text"  class="jumbotron">              
             </div>
           </div>

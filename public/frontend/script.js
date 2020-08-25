@@ -1,6 +1,12 @@
 // Add To Cart
 $(document).ready(function(){
+
  		getData();
+ 		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});	
 	$(".addtocart").on('click',function(){
 		// var id = $(this).data('id');
 		var date = document.getElementById("date").value;
@@ -40,8 +46,9 @@ $(document).ready(function(){
 			shopArray=Array();
 		}else {
 			shopArray=JSON.parse(shopString);
-			shopArray.push(shop_item);
+			
 		}
+		shopArray.push(shop_item);
 		var shopData = JSON.stringify(shopArray);
 		localStorage.setItem("victorsoul", shopData);
 		$('#mymodal').modal('show');
@@ -54,10 +61,11 @@ $(document).ready(function(){
 			var html='';
 			$.each(shopArray,function(i,v){
 				var name = v.name;
+				var date=v.date;
 				var total = v.total;
 				var description= v.description;
 				var pax=v.pax;
-				html += `<h5>${name}</h5><h5>${total}</h5><h5>${pax}</h5><h5>${description}</h5>`;	
+				html += `<h5>${name}</h5><h5>${total}</h5><h5>${date}</h5><h5>${pax}</h5><h5>${description}</h5>`;	
 			});
 			$("#text").html(html);
 			
@@ -67,19 +75,21 @@ $(document).ready(function(){
 		// for buy now
 
 		$('.buynow').on('click',function(){
+			// alert("heoo");
 			var shopString=localStorage.getItem("victorsoul");
+			alert(shopString);
 			if(shopString){
-				var shopArray=JSON.parse(shopString);
-				$.post("/booking",{shop_data:shopString},function(response){
-					if(response){
-						alert('successful!');
+				$.post('/bookstore',{shop_data:shopString},function(response){
+					console.log(response);
+					if(response){			
+						alert(response);
 						localStorage.clear();
 						getData();
-						location.href="/";
+						//location.href="/";
 					}
-				})
+				});
 			}
 
-		})
-
+		});
+		
 });

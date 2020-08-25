@@ -15,39 +15,39 @@
       <h1 class="text-center packtitle">Packages Booking</h1>
       <div class="container bg_img">
         <div class="row">
+          <div class="offset-2 col-lg-7">
 
-          <div class="offset-3 col-lg-6 my-2">
+          <div class=" my-2">
             Interest Tour Package:<span style="color:blue;"> {{$package->name}}</span>
           </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
-            Name:<input type="text" name="passenger" class="form-control" id="username" required="required" value="{{ Auth::user()->name }}" placeholder="{{ Auth::user()->name }}" readonly="readonly">
-           
+          <form action="{{route('bookstore')}}" method="post" enctype="multipart/form-date">
+            @csrf
+           <input type="hidden" name="price" value="{{$package->price}}">
+            <input type="hidden" name="id" value="{{$package->id}}">
+          <div class="my-2 form-group">
+            Name:<input type="text" name="username" class="form-control" id="username" required="required" value="{{ Auth::user()->name }}" placeholder="{{ Auth::user()->name }}" readonly="readonly">
           </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
-            Emaill:<input type="text" name="passenger" class="form-control" id="email" required="required" value="{{ Auth::user()->email }}" placeholder="{{ Auth::user()->email }}" readonly="readonly">    
-          </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
-            Phone Number:<input type="number" name="passenger" class="form-control" id="phoneno" required="required">    
+          <div class=" my-2 form-group">
+            Emaill:<input type="text" name="useremail" class="form-control" id="email" required="required" value="{{ Auth::user()->email }}" placeholder="{{ Auth::user()->email }}" readonly="readonly">    
           </div>
           <hr>
-
-          <div class="offset-3 col-lg-6 my-2 form-group">
+          <div class=" my-2 form-group">
             <label>Car</label>
-            <select name="subcategory" class="form-control" id="car">
+            <select name="car" class="form-control" id="car">
               @foreach($cars as $car)
               <option value="{{$car->price}}">{{$car->name}}</option>
               @endforeach  
             </select>
           </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
+          <div class=" my-2 form-group">
             <label>Hotel</label>
-            <select name="subcategory" class="form-control" id="hotel">
+            <select name="hotel" class="form-control" id="hotel">
               @foreach($hotels as $hotel)
               <option value="{{$hotel->price}}">{{$hotel->name}}</option>
               @endforeach  
             </select>
           </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
+          <div class=" my-2 form-group">
 
             Expected Date Of Arrival:<input type="date" name="depature_date" class="form-control" id="date" required="required">
             @error('depature_date')
@@ -55,56 +55,32 @@
             @enderror
           </div>
 
-          <div class="offset-3 col-lg-6 my-2 form-group">
+          <div class=" my-2 form-group">
             Number Of Passenger:<input type="number" name="passenger" class="form-control" id="pax" required="required">
             @error('passenger')
             <p class="text-danger">Passenger is required</p>
             @enderror
           </div>
-          <div class="offset-3 col-lg-6 my-2 form-group">
-            Special Request:<textarea name="request"  class="form-control" placeholder="Type your another request in this box!.... .." id="description"></textarea>
+          <div class=" my-2 form-group">
+            Special Request:<textarea name="description"  class="form-control" placeholder="Type your another request in this box!.... .." id="description"></textarea>
             @error('request')
             <p class="text-danger">This field is required</p>
             @enderror
-            <a href="{{route('bookcomfirm',$package->id)}}" class="btn btn-outline-info my-2 addtocart" data-name="{{$package->name}}" data-price="{{$package->price}}">Booking Now</a>
+            {{-- <a href="{{route('bookcomfirm',$package->id)}}" class="btn btn-outline-info my-2 addtocart" data-name="{{$package->name}}" data-price="{{$package->price}}">Booking Now</a> --}}
+            <input type="submit" name="" value="book" class="btn btn-outline-dark">
           </div>
-        </form>
-
+          </form>
+        </div>
+        <div class="col-md-3">
+        @foreach($categories as $category)
+        <a href="{{route('packages',$category->id)}}"><img src="{{asset($category->photo)}}" class="img-fluid tour p-1"></a>
+        @endforeach
+        
+      </div>
       </div>
     </div>
   </div>
   <!-- Catego -->
-  <div class="col-lg-2 col-md-12 col-sm-12 mt-3 ">
-    <div class="row ">
-     <div class="col-lg-12">
-      <div class="card slidebar">
-       <h4 class="text-center">Categories</h4>
-       <ul>
-        @foreach($categories as $category)
-        <li>
-         <a href="{{route('packages',$category->id)}}" class="yu"><h5>{{$category->name}}</h5></a>
-       </li>
-       @endforeach		
-     </ul>
-   </div>
- </div>
-
- <div class="col-lg-12 mt-3 mb-3">
-  <div class="card slidebar">
-   <h4 class="text-center">Destination</h4>
-   <ul>
-    <li>
-     <a href="yangon.html" class="yu" ><h5>Yangon</h5></a>
-   </li>
-   <li>
-     <a href="mandalay.html" class="yu"><h5>Mandalay</h5></a>
-   </li>
-
- </ul>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -135,5 +111,6 @@
 </div>
 @endsection
 @section('script')
+
 <script src="{{asset('frontend/script.js')}}"></script>
 @endsection

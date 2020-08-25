@@ -58,22 +58,12 @@ Route::get('holiday1/{id}', 'FrontendController@holiday1'
 
 Route::get('booking/{id}','FrontendBookController@index')->name('booking');
 Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
+// Route::resource('bookstore','FrontendBookController');
 
+Route::post('getitems', 'FrontendController@getitems')->name('getitems');
 
-
-
-
-
-
-
-
-
-
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('filterpackage', 'FrontendController@filterpackage')->name('filterpackage');
+Route::post('bookstore','FrontendBookController@store')->name('bookstore');
+// authentication
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

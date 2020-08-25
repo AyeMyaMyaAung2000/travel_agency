@@ -138,7 +138,7 @@
     </div> 
     @endforeach
   </div>
-  <a href="{{route('packageall')}}" class="btn btn-outline-primary mt-5">see all packages</a>
+  <a href="{{route('filterpackage')}}" class="btn btn-outline-primary mt-5">see all packages</a>
 </div>
 <!-- end book -->
 <!-- item carousel -->
