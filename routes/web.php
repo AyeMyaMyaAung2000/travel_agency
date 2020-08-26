@@ -42,6 +42,9 @@ Route::get('dashboard', 'BackendController@dashboard'
 // frontend
 Route::get('/', 'FrontendController@home'
 )->name('index');
+Route::get('contact', 'FrontendController@contact'
+)->name('contact');
+
 Route::get('package/{id}', 'FrontendController@package'
 )->name('packages');
 Route::get('holiday1', 'FrontendController@holiday1'
@@ -56,7 +59,21 @@ Route::get('holiday1/{id}', 'FrontendController@holiday1'
 )->name('holiday1');
 
 Route::get('booking/{id}','FrontendBookController@index')->name('booking');
+
+Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
+Route::get('filter', 'FrontendController@filter'
+)->name('filter');
+Route::post('getitems', 'FrontendController@getitems'
+)->name('getitems');
+
+
+
+
+
+
+
 Route::get('contact','FrontendController@contact')->name('contact');
+
 
 Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
 // Route::resource('bookstore','FrontendBookController');

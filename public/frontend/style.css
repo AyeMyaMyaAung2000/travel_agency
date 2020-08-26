@@ -1,3 +1,19 @@
+/*.img-fluid {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img-fluid img {
+  width: auto;
+  height: 100%;
+  margin-left: -20px;
+}*/
+
+
 .menu{
 	position: absolute;
 	position: fixed;
