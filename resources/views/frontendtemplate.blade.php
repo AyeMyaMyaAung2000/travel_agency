@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>travel</title>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/bootstrap/css/bootstrap.min.css')}}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
   {{-- <link rel="stylesheet" type="text/css" href="{{asset('frontend/style.css')}}"> --}}
   <link rel="stylesheet" href="{{asset('frontend/dist/aos.css')}}" />
 
@@ -15,6 +16,8 @@
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/style.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/slick-master/slick/slick.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/slick-master/slick/slick-theme.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+      
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   
@@ -36,8 +39,8 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item colo mx-1 px-2"><a href="{{route('index')}}" class="nav-link">Home</a></li>
           <li class="nav-item  mx-2 mt-2">
-            <div class="dropright">
-              <a  href="#" id="menu" class="dropright mx-1 px-3">
+            <div class="dropdown">
+              <a  href="#" id="menu" class="dropdown mx-1 px-3">
                 Tour Program<i class="fas fa-angle-double-right"></i>
               </a>
 
@@ -49,13 +52,12 @@
             </div>
 
           </li>
-<<<<<<< HEAD
+
           <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
           <li class="nav-item  mx-1 px-2"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
-=======
-          <li class="nav-item  mx-1 px-2"><a href="" class="nav-link px-2">About</a></li>
-          <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
->>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
+
+         
+
            <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -191,6 +193,7 @@
 <script type="text/javascript" src="{{asset('frontend/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/slick-master/slick/slick.min.js')}}"></script>
 <script src="{{asset('frontend/dist/aos.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 @yield('script')
 

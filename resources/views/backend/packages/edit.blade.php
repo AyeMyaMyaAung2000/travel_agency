@@ -90,8 +90,8 @@
 					</div>
 
 
-					<div class="col-lg-5" style="padding-left: 200px">Duration Description:</div>
-					<div class="col-lg-7"><textarea name="description" class=" form-control my-2" >{{$package->description}}</textarea>
+					<div class="col-lg-12" style="padding-left: 200px">Duration Description:</div>
+					<div class="col-lg-12"><textarea name="description" class=" form-control my-2" id="summernote">{{$package->description}}</textarea>
 						@error('name')
 						<p class="text-danger">Description is required</p>
 						@enderror
@@ -102,4 +102,14 @@
 				</form>
 			</div>
 		</div>
+@endsection
+@section('script')
+ <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+
 @endsection

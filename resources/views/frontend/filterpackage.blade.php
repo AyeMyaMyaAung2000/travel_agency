@@ -7,7 +7,7 @@
 <div class="packagebg">
 	<div class="container">
 		<div class="row mb-3">
-			<div class="col-lg-2 col-md-2 col-sm-12 mt-3 ">
+			<div class="offset-1 col-lg-2 col-md-2 col-sm-12 mt-3 ">
 			<div class="row ">
 				
 					<div class="card ">
@@ -20,10 +20,9 @@
 							@endforeach	
 						</ul>
 					</div>
-				
 			</div>
 		</div>
-		<div id="myItems">
+		<div class="col-lg-8 col-md-8 " id="myItems">
 			
 		</div>
 		</div>
@@ -71,8 +70,8 @@
 				console.log(res);
 				$.each(res,function(i,v){
 					var url='/holiday1/'+v.id;
-					html+=`<div class="col-lg-9 col-md-9 col-sm-12" data-aos="fade-up" data-aos-duration="700">
-					<div class="card mt-3 packages">
+					html+=`
+					<div class="card mt-3 packages" data-aos="fade-up" data-aos-duration="700">
 					<div class="row">
 					<div class="col-lg-6 col-md-12 col-sm-12 ">
 					<img src="${v.photo}" width="450px" height="300px" class="img-fluid"></div>
@@ -88,7 +87,7 @@
 					<hr class="p-0 m-0">
 					</div>
 					</div>
-					</div>		
+	
 					</div>`
 				});
 				$('#myItems').html(html);

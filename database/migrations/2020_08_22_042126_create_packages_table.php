@@ -19,7 +19,7 @@ class CreatePackagesTable extends Migration
             $table->text('photo');
             $table->integer('price');
             $table->integer('duration_time');
-            $table->text('description');
+            $table->longText('description');
             $table->unsignedBigInteger('hotel_id');
             $table->unsignedBigInteger('car_id');
             $table->unsignedBigInteger('category_id');

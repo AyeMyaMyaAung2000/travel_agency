@@ -71,7 +71,7 @@
 
 					<div class="col-lg-5 my-2" style="padding-left: 200px">Description:</div>
 					<div class="col-lg-7">
-						<textarea name="description" class="form-control my-2"></textarea>
+						<textarea name="description" class="form-control my-2" id="summernote"></textarea>
 						@error('description')
 						<p class="text-danger">Description is required</p>
 						@enderror
@@ -84,4 +84,14 @@
 		</div>
 
 	</div>
+@endsection
+@section('script')
+ <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+
 @endsection

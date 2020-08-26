@@ -12,8 +12,8 @@
 				<th >Photo</th>
 				<th>Price</th>
 				<th>Duration_Time</th>
-				<th >Description</th>
 				<th>Actions</th>
+				<th >Description</th>
 
 			</tr>
 		</thead>
@@ -27,7 +27,7 @@
 				<td><img src="{{asset($package->photo)}}" width="150px;"height="100px;"></td>
 				<td>{{$package->price}}</td>
 				<td>{{$package->duration_time}}</td>
-				<td>{{$package->description}}</td>
+				
 				<td>
 					<a href="{{ route ('packages.show',$package->id)}}">
 						<span class="btn btn-primary" >Detail</span>
@@ -40,6 +40,7 @@
 						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
 					</form>
 				</td>
+				<td>{{$package->description}}</td>
 
 			</tr>
 
