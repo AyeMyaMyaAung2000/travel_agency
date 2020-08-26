@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" type="text/css" href="{{asset('frontend/bootstrap/css/bootstrap.min.css')}}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   {{-- <link rel="stylesheet" type="text/css" href="{{asset('frontend/style.css')}}"> --}}
   <link rel="stylesheet" href="{{asset('frontend/dist/aos.css')}}" />
 
@@ -48,7 +49,7 @@
 
           </li>
           <li class="nav-item  mx-1 px-2"><a href="" class="nav-link px-2">About</a></li>
-          <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="" class="nav-link">Contact</a></li>
            <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

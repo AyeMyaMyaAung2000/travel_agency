@@ -17,44 +17,39 @@
         <div class="row">
           <div class="offset-3 col-lg-6 my-2">
             <h1>{{ Auth::user()->name }}</h1>
-             <h1>{{ Auth::user()->email}}</h1>
+            <h1>{{ Auth::user()->email}}</h1>
             <div id="text"  class="jumbotron">              
             </div>
+
+            <div class="offset-md-2 col-md-4 mt-3">
+              @role('customer') 
+              <a href="#" class="btn btn-secondary buy_now">Checkout</a>
+              @else
+              <a href="{{route('login')}}" class="btn btn-secondary ">Login To Buy</a>
+              @endrole
+            </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Catego -->
-  <div class="col-lg-2 col-md-12 col-sm-12 mt-3 ">
-    <div class="row ">
-     <div class="col-lg-12">
-      <div class="card slidebar">
-       <h4 class="text-center">Categories</h4>
-       <ul>
-        @foreach($categories as $category)
-        <li>
-         <a href="{{route('packages',$category->id)}}" class="yu"><h5>{{$category->name}}</h5></a>
-       </li>
-       @endforeach		
-     </ul>
+    <!-- Catego -->
+    <div class="col-lg-2 col-md-12 col-sm-12 mt-3 ">
+      <div class="row ">
+       <div class="col-lg-12">
+        <div class="card slidebar">
+         <h4 class="text-center">Categories</h4>
+         <ul>
+          @foreach($categories as $category)
+          <li>
+           <a href="{{route('packages',$category->id)}}" class="yu"><h5>{{$category->name}}</h5></a>
+         </li>
+         @endforeach		
+       </ul>
+     </div>
    </div>
+
+
  </div>
-
- <div class="col-lg-12 mt-3 mb-3">
-  <div class="card slidebar">
-   <h4 class="text-center">Destination</h4>
-   <ul>
-    <li>
-     <a href="yangon.html" class="yu" ><h5>Yangon</h5></a>
-   </li>
-   <li>
-     <a href="mandalay.html" class="yu"><h5>Mandalay</h5></a>
-   </li>
-
- </ul>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

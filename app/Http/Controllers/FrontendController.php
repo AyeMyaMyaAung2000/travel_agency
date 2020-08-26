@@ -14,6 +14,9 @@ class FrontendController extends Controller
         	$packages=Package::take(3)->get();
                 return view('frontend.home',compact('categories','packages'));
         }
+        public function contact($value=''){
+          return view('frontend.contact');
+        }
         public function package(Request $request,$id)
         {
 
@@ -61,9 +64,32 @@ public function holiday1($id){
           $package=Package::find($id);
                 return view('frontend.package.holiday1',compact('categories','package'));
         }
+        public function filter($value='')
+    { 
+      $packages=Package::all();
+      $categories=Category::orderBy('id','desc')
+          ->take(6)
+          ->get();
+
+       return view('frontend.filter',compact('packages','categories'));
+    }
+
+          public function getItems(Request $request)
+    {
+      $sid=$request->sid;
+
+      if ($sid == 0) {
+       $items = Package::all();
+      }else{
+      $items = Category::find($sid)->items;
+    }
+       return $items;
+
+    }
 
 
 }
+
 
 
 

@@ -91,26 +91,7 @@
         </a>
       </li>
        <!-- Divider -->
-      <hr class="sidebar-divider">
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Addons
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="" >
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Brand</span>
-        </a>
-    
-      </li>
-
-      <!-- Nav Item - Charts -->
-
-     
-      <hr class="sidebar-divider d-none d-md-block">
-
+      
       <!-- Sidebar Toggler (Sidebar) -->
       {{-- <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -126,7 +107,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 650px; ">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">

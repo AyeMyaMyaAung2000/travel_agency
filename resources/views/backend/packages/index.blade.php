@@ -30,14 +30,14 @@
 				<td>{{$package->description}}</td>
 				<td>
 					<a href="{{ route ('packages.show',$package->id)}}">
-						<span class="btn btn-primary" >Detail</span>
+						<span class="btn btn-primary btn-sm" >Detail</span>
 					</a>
-						<a href="{{ route ('packages.edit',$package->id)}}"><button class="btn btn-warning">Edit</button></a>
+						<a href="{{ route ('packages.edit',$package->id)}}"><button class="btn btn-warning btn-sm">Edit</button></a>
 
 					<form method="post" action="{{route('packages.destroy',$package->id)}}" onsubmit="return confirm('Are you sure delete?')" class="d-inline-block">	
 						@csrf
 						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
+						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger btn-sm">
 					</form>
 				</td>
 

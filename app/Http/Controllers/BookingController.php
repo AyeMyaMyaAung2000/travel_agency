@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
+
+    public function __construct($value=''){
+        $this->middleware('role:admin')->except('store');
+        $this->middleware('role:customer')->only('store');
+        }  
     /**
      * Display a listing of the resource.
      *
@@ -39,10 +45,6 @@ class BookingController extends Controller
     {
         $bookingArr=json_decode($request->shop_data);
 
-        $total=0;
-        foreach ($bookingArr as $row ) {
-          $total+=($row->price * $row->qty);
-        }
        $book=new Book;
        $book->voucherno=uniqid();
        $book->depature_date=date('Y-m-d');
@@ -50,14 +52,9 @@ class BookingController extends Controller
        $book->user_id=Auth::id();
        $book->package_id=id();
        $book->note=$request->notes;
-       $order->total=$total;
+       $book->total=$request->total;
 
-       $order->save();//only save into order table
-
-       //save into order _detail
-       foreach ($cartArr as $row) {
-            $order->items()->attach($row->id,['qty'=>$row->qty]);
-       }
+       $book->save();//only save into order table
 
        return 'Succesful';
     }
@@ -104,6 +101,9 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book=Book::find($id);
+        $book->delete();
+      //redirect
+      return redirect()->route('books.index');
     }
 }
