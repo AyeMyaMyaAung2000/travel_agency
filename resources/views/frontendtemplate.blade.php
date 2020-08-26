@@ -50,7 +50,7 @@
 
           </li>
           <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
-          <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
            <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -121,7 +121,7 @@
 <!-- testing2 -->
 <div class="content">
   <div class="container">
-    <div class="row p-1">
+    <div class="row p-1" >
       <div class="col-md-1">
         <img src="{{asset('frontend/img/logo.png')}}" class="img-fluid">
       </div>
@@ -143,13 +143,32 @@
          <div class="col-md-5">
            <img src="{{asset('frontend/img/visa1.png')}}" class="img-fluid w-50">
          </div>
-          <div class="col-md-4">
+          <div class="col-md-4 p-0">
            <img src="{{asset('frontend/img/kbzpay.png')}}" class="img-fluid w-50">
          </div>
        </div>
      </div>
-     <div class="col-md-3 mt-5">
-     </div>
+      <div class="col-md-3 col-sm-12 px-3 ">
+
+          
+                <h4>Follow- Us</h4>
+                <a href="https://www.facebook.com/" title="facebook"><i class="fab fa-facebook text-light fa-2x social p-2 "></i></a>
+
+              
+                  <a href="https://www.twitter.com/" title="twitter"><i class="fab fa-twitter text-light fa-2x social p-2"></i>
+                  </a>
+                
+                  <a href="https://www.instagram.com/" title="instagram"> <i class="fab fa-instagram-square text-light fa-2x social p-2"></i></a>
+                  <h4>Connect With</h4>
+                  <p>
+                    <span class="text-warning">Viber</span>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+95973142990<br>
+                     <span class="text-warning">Wechat</span>: &nbsp;&nbsp; wxid_fk98temy1go722<br>
+                      <span class="text-warning">Whatsapp</span>:+9595115371<br>
+                      <span class="text-warning">Line</span>:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +9595115371<br>
+
+                  </p>
+
+        </div>
    </div>
  </div>
 </div>

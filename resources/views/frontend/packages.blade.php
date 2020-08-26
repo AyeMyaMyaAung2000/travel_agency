@@ -10,16 +10,16 @@
 		<h1 class="text-center packtitle">Popular Tour</h1>
 		<div class="row">
 			<!-- Details -->
-			<div class="col-lg-10 col-md-12 col-sm-12">
+			<div class="col-lg-9 col-md-9 col-sm-12">
 				@foreach($packages as $package)
-				<div class="card mt-3 packages">
-					<div class="row">
-						<div class="col-lg-6 col-md-12 col-sm-12 ">
+				<div class="card mt-3 packages" data-aos="fade-up" data-aos-duration="800">
+					<div class="row" >
+						<div class="col-lg-6 col-md-12 col-sm-12 " >
 							<img src="{{asset($package->photo)}}" width="450px" height="300px" class="img-fluid">
 						</div>
 						<div class="col-lg-6 col-md-12 col-sm-12 text-left">
 							<h4 class="py-3  px-3">{{$package->name}}</h4>
-							<p><i class="fas fa-location-arrow px-2 arr text-warning"></i>Yangon  – Mandalay – Bagan – Inlay</p>
+							<p><i class="fas fa-location-arrow px-2 arr text-warning"></i>{{$package->name}}</p>
 							<hr class="p-0 m-0">
 							<p><i class="far fa-clock px-2 text-warning"></i>  Duration: {{$package->duration_time}}</p>
 							<hr class="p-0 m-0">
@@ -36,11 +36,11 @@
 
 				</div>
 				<!-- Catego -->
-				<div class="col-lg-2 col-md-12 col-sm-12 mt-3 ">
+				<div class="col-lg-3 col-md-3 col-sm-12 mt-3 ">
 					<div class="row ">
 						<div class="col-lg-12">
 							
-								<h4 class="text-center">Categories</h4>
+								<h4 class="text-center">Myanmar Tours</h4>
 
 									@foreach($categories as $category)
 									<a href="{{route('packages',$category->id)}}"><img src="{{asset($category->photo)}}" class="img-fluid tour p-1"></a>

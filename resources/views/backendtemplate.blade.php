@@ -93,18 +93,10 @@
        <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Heading -->
-      <div class="sidebar-heading">
-        Addons
-      </div>
+      
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="" >
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Brand</span>
-        </a>
-    
-      </li>
+     
 
       <!-- Nav Item - Charts -->
 
@@ -126,7 +118,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 850px; ">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
@@ -135,7 +127,7 @@
           </button>
 
           
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+         {{--  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -144,7 +136,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form> --}}
 
          
           <ul class="navbar-nav ml-auto">

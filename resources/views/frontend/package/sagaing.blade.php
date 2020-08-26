@@ -31,7 +31,7 @@
 	<!-- parallx -->
 
 	<div class="container packtitle">
-		<h4 class="font-weight-bold">MYANMAR HOLIDAY TOUR</h4>
+		<h4 class="font-weight-bold">Sagaing Trip</h4>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4"><img src="{{asset('frontend/img/route1.gif')}}" class="img-fluid w-50"></div>
@@ -42,13 +42,8 @@
 					Coverage: {{$package->name}}</h5>
 					<h5><i class="fas fa-dollar-sign text-warning"></i>
 					Price From: ${{$package->price}}</h5>
-					
-					@role('customer')
-					<a href="{{route('booking',$package->id)}}" class="btn btn-outline-dark buy_now">Booking</a>
-					@else
-					<a href="{{route('login')}}" class="btn btn-outline-dark">Login to book</a>
-					@endrole
-					
+					<a href="{{route('booking',$package->id)}}" class="btn btn-outline-primary">Book This Tour</a>
+					<a href="contactinfo.html" class="btn btn-outline-dark">Enquire</a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +52,7 @@
 	<!-- Package -->
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<h4>Detail Itinetary</h4>
 				<div class="row">
 
@@ -72,9 +67,9 @@
 					</div>
 					<div class="col-md-12 col-lg-8">
 						<div class="card-body">
-							<h5 class="card-title font-weight-bold">Day 1:Arrival Yangon</h5>
+							<h5 class="card-title font-weight-bold">1:Mandalay-Sagaing hill </h5>
 							<p class="card-text">
-								Upon arrival at Yangon international airport, our tour guide would welcome you and transfer to the hotel for check in. After that sightseeing start in Yangon, including Sule Pagoda in the heart of the city, Chauktatgyi Pagoda, one of the biggest colossal reclining Buddha image in Myanmar. Special evening visit to the massive Shwedagon Pagoda – famous worldwide – its golden stupa is the ‘ Heart ’ of Buddhism Myanmar. The Pagoda is believed to be 2,500 years old and the central stupa in surrounded by dozens of intricately decorated buildings and statues. There are always many Myanmar People praying and making offerings. Overnight at hotel in Yangon.
+								This morning, we will visit Ava, 30-minute drives to the south of Mandalay, was known as the Kingdom of Ava in the west. Sagaing is located in the Irrawaddy River, 20 km (12 mi) to the south-west of Mandalay on the opposite bank of the river. Sagaing with numerous Buddhist monasteries is an important religious and monastic centre. The pagodas and monasteries crowd the numerous hills along the ridge running parallel to the river. The central pagoda, Soon U Ponya Shin Pagoda, is connected by a set of covered staircases that run up the 240 m (790 ft) hill.
 							</p>
 						</div>
 					</div>
@@ -85,8 +80,8 @@
 
 					<div class="col-md-12 col-lg-8">
 						<div class="card-body">
-							<h5 class="card-title font-weight-bold">Day 2:Bagan</h5>
-							<p class="card-text">Take an early morning flight to Bagan. Check in hotel and rest for a while. This famous archaeological site, located on the banks of the Ayeyarwady River, is where Theravada Buddhism was first introduced to the Kingdom. It was once the site of 10,000 temples, pagodas and monasteries – it still boasts a staggering 2000 brick and gilded ruins. After arriving this morning, your leader will take you on a half-day bicycle tour of the stunning UNESCO site. Seeing these marvels on two wheels is ideal. As the site is quiet spread out you’ll get to the famous temples like Ananda Temple, Thatbyinnyu, Sularmani, Shwe Gu Gyi, Dhammayangyi Pagodas. Back to hotel and rest for a while as the temperature out site is high around 40 degree Celsius.</p>
+							<h5 class="card-title font-weight-bold">Day 2:Return Mandalay </h5>
+							<p class="card-text">We will go to visit Soon-Oo-Pon-Nya-Shin & U-Min-Thone-Sae Pagodas while taking in the panoramic view and sunset over the below plains. Return drive to Mandalay.</p>
 						</div>
 					</div>
 					<div class="col-md-12 col-lg-4">
@@ -100,7 +95,7 @@
 					</div>
 
 				</div>
-				<hr class="border-warning">
+				{{-- <hr class="border-warning">
 
 				<div class="row">
 					<div class="col-md-12 col-lg-4">
@@ -114,18 +109,18 @@
 					</div>
 					<div class="col-md-12 col-lg-8">
 						<div class="card-body">
-							<h5 class="card-title font-weight-bold">Day 3:Mandalay</h5>
-							<p class="card-text">After breakfast at the hotel, transfer to airport for flight to Mandalay (domestic flight 30 minute flying). Mandalay, the commercial centre and cultural tourism site, was established in 1857 by King Mindon, Arrive at Tada Oo International airport and drive to Mandalay and check in at the hotel./p>
+							<h5 class="card-title font-weight-bold">Day 3:Chin state</h5>
+							<p class="card-text">After breakfast at the hotel, transfer by car to chin hill. Monywa is the commercial centre and cultural tourism site, was established in 1857 by King Mindon, Arrive at Chin State and drive to continue  to the chin hill resource.</p>
 						</div>
 					</div>
-				</div>
-				<hr class="border-warning">
+				</div> --}}
+				{{-- <hr class="border-warning">
 				<div class="row">
 					<div class="col-md-12 col-lg-8">
 						<div class="card-body">
 							<h5 class="card-title font-weight-bold">
-							Day 4:Inle lake</h5>
-							<p class="card-text">TFrom Mandalay to Inle by domestic flight. Arrive to Heho and proceed to Inle lake by private car. Nyaungshwe, your gateway to Inle Lake, and a picturesque and culturally fascinating area. Check in and rest for a while. Have lunch at the local restaurant where you can enjoy Shan style of cooking’s. After lunch Inle normal sightseeing and back to hotel in the evening. Then enjoy free time to perhaps visit the bustling night market or enjoy a drink in one of the local bars. Stop by to see the local cigar makers, silk and lotus weavers, and see the unique floating gardens.</p>
+							Day 4:Mandalay Depature</h5>
+							<p class="card-text">After breakfast at hotel, you will be picked up by your guide and transferred to mandalay by car for your return departure city .(OR free morning until your departure time.)</p>
 						</div>
 					</div>
 					<div class="col-md-12 col-lg-4">
@@ -155,11 +150,16 @@
 							<p class="card-text">After breakfast, transfer to the airport and flight back to Yangon (domestic flight, 1 ½ hour flying). Arrive at Yangon and visit to Bogyoke Market (Scott’s Market) where you can find local products such as Gems & Jewelry , slippers, cloth, and so on. Then transfer to the Yangon International Airport for the departure flight to conclude this unique experience.</p>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 				<hr class="border-warning">
 				
 			</div>
-			
+			<div class="col-md-3">
+				@foreach($categories as $category)
+				<a href="#"><img src="{{asset($category->photo)}}" class="img-fluid tour p-1"></a>
+				@endforeach
+				
+			</div>
 		</div>
 	</div>
 @endsection
