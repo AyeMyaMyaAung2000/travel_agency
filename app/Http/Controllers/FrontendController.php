@@ -9,18 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
-<<<<<<< HEAD
-        public function home($value=''){
-        	$categories=Category::all();
-        	$packages=Package::take(3)->get();
-                return view('frontend.home',compact('categories','packages'));
-        }
-        public function contact($value=''){
-          return view('frontend.contact');
-        }
-        public function package(Request $request,$id)
-        {
-=======
+
   public function home($value=''){
    $categories=Category::all();
    $packages=Package::take(3)->get();
@@ -30,10 +19,10 @@ class FrontendController extends Controller
  {
 
    $categories=Category::all();
->>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
+
 
    $packages = DB::select('select * from packages where category_id = ?', [$id]);
-                // dd($packages);
+               
    return view('frontend.packages',compact('packages','categories'));
  }
  public function packageall($value='')
@@ -102,32 +91,11 @@ public function holiday1($id){
               return view('frontend.package.holiday1',compact('categories','package'));
                 break;
         }
-<<<<<<< HEAD
-        public function filter($value='')
-    { 
-      $packages=Package::all();
-      $categories=Category::orderBy('id','desc')
-          ->take(6)
-          ->get();
+          }
 
-       return view('frontend.filter',compact('packages','categories'));
-    }
+       
 
-          public function getItems(Request $request)
-    {
-      $sid=$request->sid;
-
-      if ($sid == 0) {
-       $items = Package::all();
-      }else{
-      $items = Category::find($sid)->items;
-    }
-       return $items;
-
-    }
-=======
-}
->>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
+        
 
 public function filterpackage($value=''){
   $categories=Category::all();

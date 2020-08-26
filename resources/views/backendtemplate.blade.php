@@ -91,9 +91,7 @@
         </a>
       </li>
        <!-- Divider -->
-<<<<<<< HEAD
-      
-=======
+
       <hr class="sidebar-divider">
       <!-- Heading -->
       
@@ -105,8 +103,6 @@
 
      
       <hr class="sidebar-divider d-none d-md-block">
-
->>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
       <!-- Sidebar Toggler (Sidebar) -->
       {{-- <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -122,17 +118,10 @@
       <div id="content">
 
         <!-- Topbar -->
-<<<<<<< HEAD
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
-=======
-<<<<<<< HEAD
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
-=======
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 650px; ">
->>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
->>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
 
-          <!-- Sidebar Toggle (Topbar) -->
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
+
+            <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
             <i class="fa fa-bars"></i>
 
@@ -147,14 +136,12 @@
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
-            </div>
-<<<<<<< HEAD
+
           </form> --}}
 
-=======
+
           </form>
- --}}
->>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
+ 
          
           <ul class="navbar-nav ml-auto">
 
