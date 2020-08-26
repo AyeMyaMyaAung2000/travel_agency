@@ -17,7 +17,12 @@
         <div class="row">
           <div class="offset-3 col-lg-6 my-2">
             <h1>{{ Auth::user()->name }}</h1>
+<<<<<<< HEAD
             <h1>{{ Auth::user()->email}}</h1>
+=======
+             <h1>{{ Auth::user()->email}}</h1>
+             <a href="#" class="buynow btn btn-outline-secondary">Buy now</a>
+>>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
             <div id="text"  class="jumbotron">              
             </div>
 

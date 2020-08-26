@@ -9,6 +9,7 @@ use App\Package;
 use App\Car;
 use App\Hotel;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class FrontendBookController extends Controller
@@ -46,7 +47,44 @@ class FrontendBookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       // $request->validate([
+       //      'codeno'=>'required|min:4',
+       //      'name'=>'required',
+       //      'photo'=>'required',
+       //      'price'=>'required',
+       //      'discount'=>'required',
+       //      'description'=>'required',
+       //      'brand'=>'required',
+       //      'subcategory'=>'required'
+
+
+       //  ]);
+
+
+        $total=($request->car+$request->hotel+$request->price)*$request->passenger;
+
+     // dd($request->id);
+     // dd($request->car);
+      // dd($request->hotel);
+      // dd($request->package);
+      // dd($request->passenger);
+
+        //data insert
+        $item=new Book;
+         // $item->table-column=$request->form input type name;
+        $item->depature_date=$request->depature_date;
+        $item->voucherno=uniqid();
+        $item->status=0;
+        $item->note=$request->description;
+        $item->passenger=$request->passenger;
+        $item->total=$total;
+        $item->user_id=Auth::id();
+        $item->package_id=$request->id;
+        $item->save();
+       
+        //redirect
+        return redirect()->route('index');
     }
 
     /**

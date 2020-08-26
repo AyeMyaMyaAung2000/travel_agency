@@ -53,13 +53,13 @@ Route::get('packageall', 'FrontendController@packageall'
 )->name('packageall');
 Route::any('packagesearch', 'FrontendController@packagesearch'
 )->name('packagesearch');
-
 // packages detail
 
 Route::get('holiday1/{id}', 'FrontendController@holiday1'
 )->name('holiday1');
 
 Route::get('booking/{id}','FrontendBookController@index')->name('booking');
+<<<<<<< HEAD
 Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
 Route::get('filter', 'FrontendController@filter'
 )->name('filter');
@@ -71,16 +71,17 @@ Route::post('getitems', 'FrontendController@getitems'
 
 
 
+=======
+Route::get('contact','FrontendController@contact')->name('contact');
+>>>>>>> ae2e90f01dce8b222642aff39bb8221a38347a86
 
+Route::get('bookcomfirm/{id}','FrontendBookController@show')->name('bookcomfirm');
+// Route::resource('bookstore','FrontendBookController');
 
+Route::post('getitems', 'FrontendController@getitems')->name('getitems');
 
-
-
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('filterpackage', 'FrontendController@filterpackage')->name('filterpackage');
+Route::post('bookstore','FrontendBookController@store')->name('bookstore');
+// authentication
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

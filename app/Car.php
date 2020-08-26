@@ -13,4 +13,8 @@ class Car extends Model
     {
     	return $this->belongsTo('App\Package');
     }
+     public function booking($value='')
+    {
+    	return $this->belongsTo('App\Book');
+    }
 }

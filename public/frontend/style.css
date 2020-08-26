@@ -35,7 +35,7 @@
 	background: #0f2547;
 	}
 #mainMenu ul li a{
-	color: #f2b00a;
+	color: #dcf2eb;
 	font-family: 'Playfair Display', serif;
 
 }
@@ -62,21 +62,21 @@
 .btn-hero{
 	background: #0f2547;
 	color: #fff;
-	animation: skew 3s infinite;
-	animation-direction: normal;
-	transform: skew(1deg);
-	animation-direction: alternate;
-	padding: 5px 17px;
+	/*animation: skew 3s infinite;*/
+	/*animation-direction: normal;*/
+	transform: skew(10deg);
+	/*animation-direction: alternate;*/
+	
 
 }
-@keyframes skew{
+/*@keyframes skew{
 	0%{
 		transform: skew(15deg);
 	}
 	100%{
 		transform: skew(-20deg);
 	}
-}
+}*/
 #carouselExampleCaptions{
 	z-index: -5;
 }
@@ -169,8 +169,11 @@ h2{
 		}
 		/*end content*/
     /*testing*/
+    .booktext{
+    	font-size: 5;
+    }
     .booksection{
-    	background-image: url(img/11.jpg);
+    	background-image: url(img/mandalay_royal.jpg);
     	background-attachment: fixed;
     }
     .b{
@@ -179,7 +182,7 @@ h2{
   .book {
   transform-style: preserve-3d;
   position: relative;
-  height: 100px;
+  height: 90px;
   cursor: pointer;
   backface-visibility: visible;
 }
@@ -271,7 +274,7 @@ h2{
 ul {
   list-style: none;
 }
-.card ul li::before {
+/*.card ul li::before {
   content: "";
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
   background-size: contain;
@@ -281,7 +284,7 @@ ul {
   position: relative;
   top: 0.1rem;
   margin-right: 0.2rem;
-}
+}*/
 /*end package*/
 /*slidebar*/
 .slidebar{
@@ -319,10 +322,9 @@ font-family: 'Playfair Display', serif;
 
 }
 .packagebg{
-	background-image: url(img/kayin.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-color: #ebf1f2;
 }
 .button{
 	background-color: #183266;
 }
+/*list style*/

@@ -6,33 +6,34 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
     </ol> --}}
-    <div class="carousel-inner">
+   <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="frontend/img/carousel2.jpg" class="d-block w-100" alt="...">
+        <img src="frontend/img/inlay.jpg" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1 data-aos="zoom-in-up">Find a Perfect Deal For Your Next Trip</h1>
+          <h1 data-aos="zoom-in-up">find a perfect deal for your next trip</h1>
          
          
         </div>
       </div>
       <div class="carousel-item">
-        <img src="frontend/img/carousel3.jpg" class="d-block w-100" alt="...">
+        <img src="frontend/img/beach.webp" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1>find a perfect deal for your next trip</h1>
+          <h1>we are committed to sustainable and responsive travel</h1>
          
         </div>
       </div>
       <div class="carousel-item">
-        <img src="frontend/img/carousel4.webp" class="d-block w-100" alt="...">
+        <img src="frontend/img/kuthotaw.jpg" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1 class="mb-4 text-capitalize">find a perfect deal for your next trip</h1>
+          <h1 class="mb-4 text-capitalize"><span style="color:#183a61">Enjoy Your Dream Vacation</span></h1>
          
         </div>
       </div>
     </div>
+
   </div>
 @endsection
 @section('pageindicator')
@@ -77,10 +78,10 @@
                   @csrf
                   <div class="fields d-block d-lg-flex">
                     <div class="text-field-search one-third">
-                      <input type="text" class="form-control" name="search" placeholder="search packages">
+                      <input type="text" class="form-control w" name="search" placeholder="search packages" >
                     </div>
                    </div>
-                  <input type="submit" class="search-submit btn btn-search" value="Search Tour" name="">
+                  <input type="submit" class="search-submit btn btn-search" value=" Search " name="">
                 </form>
               </div>
             </div>
@@ -101,7 +102,7 @@
               <img src="frontend/img/1.jpg" class="img-fluid img1">
             </a>
           </div>
-          <div class="col-lg-8 ml-auto align-self-center order-lg-1">
+          <div class="col-lg-8 ml-auto align-self-center order-lg-1" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1200">
             <h5 class="text-center p-2">WELCOME TO MYANMAR AND MYANMAR TOURISM SERVICES</h5>
             <p class="text-center">
               Mingalarbar! It means "Auspiciousness to you" in Myanmar , the national language. This greeting that is expressed on the faces, mentioned in the appearances in the uncontrollable cordialities of Myanmar people showing the peaceful, friendliness and warm hospitalities of Myanmar, the Golden Land.
@@ -120,7 +121,7 @@
 @section('itemcarousel')
  <!-- book -->
   <div class=" text-center booksection container-fluid">
-    <h4 class="text-center">Book Now Package</h4>
+    <h4 class="text-center">Myanmar Tour Package</h4>
     <div class="row">
     	@foreach($packages as $package)
      <div class="col-md-4 mt-5">
@@ -128,9 +129,9 @@
         <div class="back"></div>
        <!--  <div class="page6 text-dark">hello</div>
         <div class="page5"></div> -->
-        <div class="page4 text-center"><p>{{$package->name}}<br>{{$package->price}}$</p><a href="{{route('holiday1',$package->id)}}" class="btn bg-primary h-25">Detail</a></div>
+        <div class="page4 text-center"><span class="booktext">{{$package->name}}<br>{{$package->price}}$</span><a href="{{route('holiday1',$package->id)}}" class="btn bg-light ">Detail</a></div>
 
-        <div class="page3"><img src="frontend/img/10.jpg" class="img-fluid b"></div>
+        <div class="page3"><img src="{{asset($package->photo)}}" class="img-fluid b"></div>
         <div class="page2"></div>
         <div class="page1"></div>
         <div class="front text-center"><img src="{{asset($package->photo)}}" class="img-fluid b"></div>
@@ -138,7 +139,7 @@
     </div> 
     @endforeach
   </div>
-  <a href="{{route('packageall')}}" class="btn btn-outline-primary mt-5">see all packages</a>
+  <a href="{{route('filterpackage')}}" class="btn btn-outline-light mt-5">see all packages</a>
 </div>
 <!-- end book -->
 <!-- item carousel -->
@@ -147,7 +148,7 @@
  <div class="" style="background-color: #f7f1e4;">
   <div class="container text-center container-fluid" style="background-color:  #f7f1e4">
     <div class="jumbotron jumbotron-fluid" style="background-color:  #f7f1e4">
-      <h1 class="">POPULAR TOURS</h1>
+      <h4 class="">POPULAR TOURS</h4>
       <hr class="divider">
       <div class="container">
         <div class="row">
