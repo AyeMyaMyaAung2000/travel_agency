@@ -104,9 +104,9 @@
       <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+      {{-- <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+      </div> --}}
 
     </ul>
     <!-- End of Sidebar -->
@@ -118,7 +118,11 @@
       <div id="content">
 
         <!-- Topbar -->
+<<<<<<< HEAD
         <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 550px; ">
+=======
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="padding-left: 650px; ">
+>>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
@@ -136,8 +140,13 @@
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
           </form> --}}
 
+=======
+          </form>
+ --}}
+>>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
          
           <ul class="navbar-nav ml-auto">
 

@@ -49,8 +49,13 @@
             </div>
 
           </li>
+<<<<<<< HEAD
           <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
           <li class="nav-item  mx-1 px-2"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+=======
+          <li class="nav-item  mx-1 px-2"><a href="" class="nav-link px-2">About</a></li>
+          <li class="nav-item  mx-1 px-2"><a href="contact.html" class="nav-link">Contact</a></li>
+>>>>>>> bbd2547830b68c166f5345bddf530cfcf18d6e95
            <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
