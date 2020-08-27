@@ -66,6 +66,7 @@ public function holiday1($id){
     return view('frontend.package.detail',compact('categories','package'));
  
 }
+<<<<<<< HEAD
 
 
     // public function profile($value='')
@@ -73,6 +74,8 @@ public function holiday1($id){
     //    return view('frontend.package.profile');
     // }
 
+=======
+>>>>>>> 80da7803c88b99ec0a99b3cc586369bb3603d7e4
 
 public function filterpackage($value=''){
   $categories=Category::all();

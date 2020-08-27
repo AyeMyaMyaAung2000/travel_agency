@@ -74,22 +74,6 @@ $(document).ready(function(){
 
 		// for buy now
 
-		$('.buynow').on('click',function(){
-			// alert("heoo");
-			var shopString=localStorage.getItem("victorsoul");
-			alert(shopString);
-			if(shopString){
-				$.post('/bookstore',{shop_data:shopString},function(response){
-					console.log(response);
-					if(response){			
-						alert(response);
-						localStorage.clear();
-						getData();
-						//location.href="/";
-					}
-				});
-			}
-
-		});
+		
 		
 });

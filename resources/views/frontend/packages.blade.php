@@ -7,7 +7,7 @@
 @section('welcome')
 <div class="packagebg">
 	<div class="container">
-		<h1 class="text-center packtitle">Popular Tour</h1>
+		<h1 class="text-center packtitle"></h1>
 		<div class="row">
 			<!-- Details -->
 			<div class="col-lg-9 col-md-9 col-sm-12">
@@ -17,16 +17,15 @@
 						<div class="col-lg-6 col-md-12 col-sm-12 " >
 							<img src="{{asset($package->photo)}}" width="450px" height="300px" class="img-fluid">
 						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12 text-left">
-							<h4 class="py-3  px-3">{{$package->name}}</h4>
-							<p><i class="fas fa-location-arrow px-2 arr text-warning"></i>{{$package->name}}</p>
+						<div class="col-lg-6 col-md-12 col-sm-12 text-left mt-3ss">
+							<p><i class="fas fa-location-arrow px-2 mt-3 arr" style="color: #cfbb78"></i>{{$package->name}}</p>
 							<hr class="p-0 m-0">
-							<p><i class="far fa-clock px-2 text-warning"></i>  Duration: {{$package->duration_time}}</p>
+							<p><i class="far fa-clock px-2" style="color: #cfbb78"></i>  Duration: {{$package->duration_time}}</p>
 							<hr class="p-0 m-0">
-							<p><i class="fas fa-dollar-sign px-2 text-warning"></i>
+							<p><i class="fas fa-dollar-sign px-2" style="color: #cfbb78"></i>
 								Price: $<span style="color:red"> {{$package->price}}</span>
 
-								<a href="{{route('holiday1',$package->id)}}" class="btn text-light mx-5 my-1 px-3  button">Detail</a></p>
+								<a href="{{route('holiday1',$package->id)}}" class="btn ml-5 mt-3 px-3  button">Detail</a></p>
 								<hr class="p-0 m-0">
 							</div>
 
@@ -53,7 +52,11 @@
 	</div>
 	@endsection
 	@section('pageindicator')
+	<div class="container-fluid" style="width: 50">
+		.
+	</div>
 	<div class="container">
+		
 		<nav class="navbar navbar-expand-lg navbar-light pagecontroller bg-light">
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

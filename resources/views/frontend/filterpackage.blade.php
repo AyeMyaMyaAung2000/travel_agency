@@ -7,19 +7,18 @@
 <div class="packagebg">
 	<div class="container">
 		<div class="row mb-3">
-			<div class="offset-1 col-lg-2 col-md-2 col-sm-12 mt-3 ">
+			<div class=" col-lg-3 col-md-3 col-sm-12 mt-3 ">
+				<h4 class="ml-5">Tours</h4>
 			<div class="row ">
-				
-					<div class="card ">
-						<h4 class="text-center">Tours</h4>
+					
 						<ul>
 							@foreach($categories as $category)
 							<li>
-								<a href="#" class="filter" data-id="{{$category->id}}"><i class="fab fa-gripfire"></i><h5>{{$category->name}}</h5></a>
+								<a href="#" class="filter text-decoration-none" data-id="{{$category->id}}"><h5><i class="fab fa-gripfire"></i> {{$category->name}}</h5></a>
 							</li>
 							@endforeach	
 						</ul>
-					</div>
+					
 			</div>
 		</div>
 		<div class="col-lg-8 col-md-8 " id="myItems">
@@ -30,6 +29,9 @@
 </div>
 @endsection
 @section('pageindicator')
+<div class="container-fluid" style="width: 50">
+		.
+	</div>
 <div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light pagecontroller bg-light">
 
@@ -75,15 +77,15 @@
 					<div class="row">
 					<div class="col-lg-6 col-md-12 col-sm-12 ">
 					<img src="${v.photo}" width="450px" height="300px" class="img-fluid"></div>
-					<div class="col-lg-6 col-md-12 col-sm-12 text-left">
-					<h4 class="py-3  px-3">${v.name}</h4>
-					<p><i class="fas fa-location-arrow px-2 arr text-warning"></i>${v.name}</p>
+					<div class="col-lg-6 col-md-12 col-sm-12 mt-3 text-left">
+					
+					<p><i class="fas fa-location-arrow px-2 arr" style="color: #cfbb78"></i>${v.name}</p>
 					<hr class="p-0 m-0">
-					<p><i class="far fa-clock px-2 text-warning"></i>  Duration: ${v.duration_time}</p>
+					<p><i class="far fa-clock px-2 " style="color: #cfbb78"></i>  Duration: ${v.duration_time}</p>
 					<hr class="p-0 m-0">
-					<p><i class="fas fa-dollar-sign px-2 text-warning m-0"></i>
+					<p><i class="fas fa-dollar-sign px-2 m-0" style="color:#cfbb78"></i>
 					Price: $<span style="color:red"> ${v.price}</span>
-					<a href="${url}" class="btn text-light mx-5  px-3  button">Detail</a></p>
+					<a href="${url}" class="btn ml-5 mt-3 px-3  button">Detail</a></p>
 					<hr class="p-0 m-0">
 					</div>
 					</div>

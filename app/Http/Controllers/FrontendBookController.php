@@ -61,10 +61,10 @@ class FrontendBookController extends Controller
 
        //  ]);
 
-
+       
         $total=($request->car+$request->hotel+$request->price)*$request->passenger;
 
-     // dd($request->id);
+     // dd($success1);
      // dd($request->car);
       // dd($request->hotel);
       // dd($request->package);
@@ -74,7 +74,7 @@ class FrontendBookController extends Controller
         $item=new Book;
          // $item->table-column=$request->form input type name;
         $item->depature_date=$request->depature_date;
-        $item->voucherno=uniqid();
+        $item->voucherno=$request->phone;
         $item->status=0;
         $item->note=$request->description;
         $item->passenger=$request->passenger;
@@ -82,9 +82,10 @@ class FrontendBookController extends Controller
         $item->user_id=Auth::id();
         $item->package_id=$request->id;
         $item->save();
-       
         //redirect
-        return redirect()->route('index');
+        // return redirect()->route('index');
+        return redirect()->back() ->with('alert',$total);
+        
     }
 
     /**

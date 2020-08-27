@@ -8,11 +8,10 @@
     </ol> --}}
    <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="frontend/img/inlay.jpg" class="d-block w-100" alt="...">
+        <img src="{{asset('frontend/img/ayemyamyaaung.jpg')}}" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1 data-aos="zoom-in-up">find a perfect deal for your next trip</h1>
-         
+          <h3 data-aos="zoom-in-up" style="color:#10325e">Find A Perfect Deal For Your Next Trip</h3>
          
         </div>
       </div>
@@ -20,7 +19,7 @@
         <img src="frontend/img/beach.webp" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1>we are committed to sustainable and responsive travel</h1>
+          <h3 style="color:#10325e">We Are Committed To Sustainable And Responsive Travel</h3>
          
         </div>
       </div>
@@ -28,7 +27,7 @@
         <img src="frontend/img/kuthotaw.jpg" class="d-block w-100" alt="...">
         <div class="overlay"></div>
         <div class="carousel-caption mb-5 d-none d-md-block main-text">
-          <h1 class="mb-4 text-capitalize"><span style="color:#183a61">Enjoy Your Dream Vacation</span></h1>
+          <h3 class="mb-4 text-capitalize"><span style="color:#10325e">Enjoy Your Dream Vacation</span></h3>
          
         </div>
       </div>
@@ -39,17 +38,10 @@
 @section('pageindicator')
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light pagecontroller bg-light">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <p class="nav-link" href="#"><i class="fas fa-angle-double-right"></i></p>
           </li>
          
         </ul>
@@ -64,10 +56,10 @@
         <div class="row">
           <div class="col-md-12 tab-search">
             <div class="nav nav-pills" id="v-pills-tabs" role="tablist" aria-orientation="vertical">
-              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">Flights</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3 btn-hero" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Hotels</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Car Rents</a>&nbsp;
-              <a href="#v-pills-home" class="nav-link p-3  btn-hero" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crusis</a>
+             
+              <a href="#v-pills-home" class="nav-link p-3 btn-hero" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Galary</a>&nbsp;
+            
+             
             </div>
           </div>
           <div class="col-md-3"></div>
@@ -129,7 +121,7 @@
         <div class="back"></div>
        <!--  <div class="page6 text-dark">hello</div>
         <div class="page5"></div> -->
-        <div class="page4 text-center"><span class="booktext">{{$package->name}}<br>{{$package->price}}$</span><a href="{{route('holiday1',$package->id)}}" class="btn bg-light ">Detail</a></div>
+        <div class="page4 text-center"><span class="booktext">{{$package->name}}<br>{{$package->price}}$</span><a href="{{route('holiday1',$package->id)}}" class="btn" style="background-color: #beebe9;">Detail</a></div>
 
         <div class="page3"><img src="{{asset($package->photo)}}" class="img-fluid b"></div>
         <div class="page2"></div>
@@ -139,15 +131,15 @@
     </div> 
     @endforeach
   </div>
-  <a href="{{route('filterpackage')}}" class="btn btn-outline-light mt-5">see all packages</a>
+  <a href="{{route('filterpackage')}}" class="btn btn-outline-dark mt-5 my-4">see all packages</a>
 </div>
 <!-- end book -->
 <!-- item carousel -->
 
 <div>
  <div class="" style="background-color: #f7f1e4;">
-  <div class="container text-center container-fluid" style="background-color:  #f7f1e4">
-    <div class="jumbotron jumbotron-fluid" style="background-color:  #f7f1e4">
+  <div class="container text-center container-fluid items" style="background-color: #fcfaf0">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #fcfaf0">
       <h4 class="">POPULAR TOURS</h4>
       <hr class="divider">
       <div class="container">

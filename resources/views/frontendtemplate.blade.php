@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,17 +23,32 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  {{-- new --}}
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  {{-- date --}}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css" />
   
+
 </head>
 <body>
 
 
   <!-- navigation bar -->
+
   
   <nav class="navbar navbar-expand-lg m-0 menu" id="scroll">
     <div class="container-fluid">
       <a href="{{route('index')}}">
         <img src="{{asset('frontend/img/carlogo.png')}}" class="img-fluid " width="150"></a>
+
+
+  <nav class="navbar navbar-expand-lg menu" id="scroll">
+    <div class="container">
+      <a href="{{route('index')}}" style="color: #c9b779">
+        <img src="{{asset('frontend/img/newlogo.png')}}" class="img-fluid " width="70">Travel Agency</a>
+
         <button class="navbar-toggler p-0" data-toggle="collapse" data-target="#mainMenu">
           <i class="fas fa-sliders-h button"></i>     
         </button>
@@ -43,7 +59,11 @@
             <li class="nav-item  mx-2 mt-2">
               <div class="dropdown">
                 <a  href="#" id="menu" class="dropdown mx-1 px-3">
+
                   Tour Program<i class="fas fa-angle-double-right"></i>
+
+                  Tour Program&nbsp;<i class="fas fa-angle-down"></i>
+
                 </a>
 
                 <div class="dropdown-menu" >
@@ -54,7 +74,6 @@
               </div>
 
             </li>
-
            
             <li class="nav-item  mx-1 px-2"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
@@ -62,6 +81,8 @@
             <li class="nav-item  mx-1 px-2"><a href="{{route('about')}}" class="nav-link px-2">About</a></li>
 
 
+            <li class="nav-item  mx-1 px-2"><a href="about1.html" class="nav-link px-2">About</a></li>
+            <li class="nav-item  mx-1 px-2"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
             <li class="nav-item">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -105,13 +126,11 @@
               </ul>
             </div>
           </li>
-          <div class="view-detail" data-target="#checkModal" data-toggle="modal">
+         {{--  <div class="view-detail" data-target="#checkModal" data-toggle="modal">
 
-          </div>
+          </div> --}}
         </ul>
-        <div class="animation"></div>
       </div>
-
     </div>
   </nav>
 
@@ -144,6 +163,18 @@
          <p><i class="fas fa-phone-alt text-warning"></i>(+95) 09 403 532 345</p>
          <p><i class="fab fa-viber text-warning"></i> viber: +959440369876</p>
          <p><i class="far fa-envelope text-warning"></i>Info@myanmartravel.com</p>
+    <div class="container mt-5">
+      <div class="row p-1" >
+        <div class="col-md-1">
+          <img src="{{asset('frontend/img/logo (1).png')}}" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+         <h4>Contact Info</h4>
+         <p><i class="fas fa-home" style="color: #c9b779"></i>78th Street,30x31,Mandalay
+         </p>
+         <p><i class="fas fa-phone-alt" style="color: #c9b779"></i>(+95) 09 403 532 345</p>
+         <p><i class="fab fa-viber" style="color: #c9b779"></i> viber: +959440369876</p>
+         <p><i class="far fa-envelope" style="color: #c9b779"></i>Info@myanmartravel.com</p>
        </div>
        <div class="col-md-4 pl-0">
          <h4>We accept</h4>
@@ -187,7 +218,7 @@
 
 <!-- social -->
 <!-- footer -->
-<footer class="footer">
+<footer class="footer p-1">
   <div class="container text-light text-center text-dark text-monospace">
     <p class="footertext m-0">Copyright &copy; All Right Result | Powered By Web-Design-2020 </p>
   </div>
@@ -199,6 +230,7 @@
 <script type="text/javascript" src="{{asset('frontend/slick-master/slick/slick.min.js')}}"></script>
 <script src="{{asset('frontend/dist/aos.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 @yield('script')
 
@@ -209,7 +241,7 @@
     delay:250,
   });
 </script>
-<script >
+{{-- <script >
 
   var prescroll= window.pageYOffset;
   window.onscroll = function() {
@@ -223,7 +255,7 @@
     prescroll= currentScroll;
 
   }
-</script>
+</script> --}}
 
 <script>
   $(document).ready(function(){
@@ -265,7 +297,7 @@
     });
 
   });
-  
+
 </script>
 </body>
 </html>
