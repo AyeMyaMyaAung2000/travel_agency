@@ -39,6 +39,15 @@ public function contact($value='')
  
   return view('frontend.package.contact',compact('categories'));
 }
+
+
+public function about($value='')
+ {
+
+  $categories=Category::all();
+ 
+  return view('frontend.package.about',compact('categories'));
+}
 // searchsection
 public function packagesearch(Request $request)
 {
@@ -53,55 +62,17 @@ public function packagesearch(Request $request)
 public function holiday1($id){
   $categories=Category::all();
   $package=Package::find($id);
-<<<<<<< HEAD
+
     return view('frontend.package.detail',compact('categories','package'));
  
 }
-=======
-  
 
-   switch ($id) {
-            case '1':
-                return view('frontend.package.holiday1',compact('categories','package'));
-                break;
 
-             case '2':
-               return view('frontend.package.bagan',compact('categories','package'));
-                break;
-            case '3':
-               return view('frontend.package.bago',compact('categories','package'));
-                break;
-            case '4':
-               return view('frontend.package.chin-hill',compact('categories','package'));
-                break;
-            case '5':
-               return view('frontend.package.hpa-an',compact('categories','package'));
-                break;
-            case '6':
-               return view('frontend.package.hyper',compact('categories','package'));
-                break;
-            case '7':
-               return view('frontend.package.kalaw-treking',compact('categories','package'));
-                break;
-            case '8':
-               return view('frontend.package.kharkarborazi',compact('categories','package'));
-                break;
-            case '9':
-               return view('frontend.package.kyaikhtiyo',compact('categories','package'));
-                break;
-            case '10':
-               return view('frontend.package.lawpita',compact('categories','package'));
-                break;
-            default:
-              return view('frontend.package.holiday1',compact('categories','package'));
-                break;
-        }
-          }
+    // public function profile($value='')
+    // {   
+    //    return view('frontend.package.profile');
+    // }
 
-       
-
-        
->>>>>>> c47eb271241afab9f79cb6f4ff9933bc9bc6ff89
 
 public function filterpackage($value=''){
   $categories=Category::all();

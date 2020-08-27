@@ -1,6 +1,7 @@
 @extends('frontendtemplate')
 @section('welcome')
 <div class="container">
+	 <img src="{{asset('https://nouranmedia.com/wp-content/uploads/2018/11/contact_us_banner1-1.jpg')}}" width="100%">
 	<nav class="navbar navbar-expand-lg navbar-light pagecontroller bg-light">
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +25,7 @@
 </div>
 <div class="container my-5">
 	<h1 class="text-center">Contact Us</h1>
+
 		<div class="row">
 			<div class="col-md-6">
 				
@@ -31,36 +33,63 @@
 					<img src="{{asset('frontend/img/contact.jpg')}}" class="img-fluid w-75">
 				</div>
 			</div>
-			<div class="col-md-5 my-5" style="border-style: solid;border-radius: 10px;border-color: #255285;">
+			<div class="col-md-6 my-5" style="border-style: solid;border-radius: 10px;border-color: #255285;">
 				<h1 class="form1">Send a message</h1>
 				<form enctype="multipart/form-data" >
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+							<i class="fas fa-user-friends" style="color:#a4a9eb;">Name: 
+							</i>
+							</div>
+						</div>
+						<div class="col-lg-8">
+						<div class="form-group">	
+							<input type="text" name="name"placeholder="Enter your name!" class="form-control">
+						</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-group">
+							<i class="fas fa-envelope-open-text" style="color:#a4a9eb;">Email: 
+							</i>
+							</div>
+						</div>
+						<div class="col-lg-8">
+						<div class="form-group">	
+							<input type="text" name="name"placeholder="Enter your email" class="form-control">
+						</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-group">
+							<i class="fas fa-phone" style="color:#a4a9eb;">Phone-No: 
+							</i>
+							</div>
+						</div>
+						<div class="col-lg-8">
+						<div class="form-group">	
+							<input type="text" name="name"placeholder="Enter your phone number!" class="form-control">
+						</div>
+						</div>
+						<div class="col-lg-12">
+						
+							<div class="form-group">
+							<textarea cols="40" placeholder="Enter a message!" style="color:#a4a9eb;" class="form-control"></textarea>
+							
+							</div>
+						</div>
+					
 					<div class="form-group">
-
-						<label>Name:</label> <input type="text" name="name"placeholder="Name" class="form-control">
+						<a href="" class="btn float-right" style="color:white;background-color:#a4a9eb ">Submit</a>
 					</div>
-					<div class="form-group">
-						<label>Email:</label> <input type="email" name="email"placeholder="Email" class="form-control">
-					</div>
-					<div class="form-group">
-						<label>Telephone:</label> <input type="number" name="number" placeholder="Telephone" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<label>Comment:</label><textarea placeholder="Comment" class="form-control"></textarea>
-					</div>
-
-					<div class="form-group">
-						<input type="button" value="Send" onclick="show()" class="form_button form">
-					</div>
-
+				</div>
+			</div>
 				</form>
 
 			</div>
 
-		</div>
 	</div>
-
-	<div class="container">
+</div>
+<div class="container">
 		<div class="row">
 			<div class="container py-5">
 				<h3 class="form1 text-center"> LOCATION</h3>
@@ -71,3 +100,26 @@
 
 <!-- end of page indicator -->
 	@endsection
+
+	<script type="text/javascript">
+ $(".mydate").datepicker({
+       format:'yyyy-mm-dd',
+       autoclose: true
+   });
+    $(".flexslider").flexslider({
+        animation: "fade",
+        controlNav: false,
+        animationLoop: true,
+        directionNav: false,
+        slideshow: true,
+        slideshowSpeed: 5000
+    });
+</script>
+
+<script language="javascript">
+        $(document).ready(function () {
+            $("#txtworkingdays").datepicker({
+                beforeShowDay: $.datepicker.noWeekends
+            });
+        });
+    </script>

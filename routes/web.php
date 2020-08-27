@@ -44,7 +44,10 @@ Route::get('/', 'FrontendController@home'
 )->name('index');
 Route::get('contact', 'FrontendController@contact'
 )->name('contact');
-
+// Route::get('profile', 'FrontendController@profile'
+// )->name('profile');
+Route::get('about', 'FrontendController@about'
+)->name('about');
 Route::get('package/{id}', 'FrontendController@package'
 )->name('packages');
 Route::get('holiday1', 'FrontendController@holiday1'
