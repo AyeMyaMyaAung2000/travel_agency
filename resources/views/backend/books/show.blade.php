@@ -14,7 +14,11 @@
 								<td colspan="3">{{$booking_detail->user->name}}</td>
 						</tr>
 						<tr>
-								<th colspan="3">Voucherno</th>
+								<th colspan="3">Email</th>
+								<td colspan="3">{{$booking_detail->user->email}}</td>
+						</tr>
+						<tr>
+								<th colspan="3">Phone Number</th>
 									<td colspan="3">{{$booking_detail->voucherno}}</td>
 						</tr>
 						<tr>

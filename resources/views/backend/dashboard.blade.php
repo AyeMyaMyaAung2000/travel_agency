@@ -52,13 +52,9 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
+
 </div>
 </div>
-
-
-=======
->>>>>>> c47eb271241afab9f79cb6f4ff9933bc9bc6ff89
 
   <!-- End of Main Content -->
   @endsection

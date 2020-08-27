@@ -30,6 +30,13 @@
           <div class=" my-2 form-group">
             Emaill:<input type="text" name="useremail" class="form-control" id="email" required="required" value="{{ Auth::user()->email }}" placeholder="{{ Auth::user()->email }}" readonly="readonly">    
           </div>
+           <div class=" my-2 form-group">
+            Phone:<input type="number" name="phone" class="form-control" id="pax" required="required">
+            @error('passenger')
+            <p class="text-danger">Passenger is required</p>
+            @enderror
+          </div>
+
           <hr>
           <div class=" my-2 form-group">
             <label>Car</label>
@@ -49,7 +56,9 @@
           </div>
           <div class=" my-2 form-group">
 
-            Expected Date Of Arrival:<input type="date" name="depature_date" class="form-control" id="date" required="required">
+            Expected Date Of Arrival:
+            <input type="date" name="depature_date" class="form-control"  required="required" id="date">
+            
             @error('depature_date')
             <p class="text-danger">Depature date is required</p>
             @enderror
@@ -67,7 +76,7 @@
             <p class="text-danger">This field is required</p>
             @enderror
             {{-- <a href="{{route('bookcomfirm',$package->id)}}" class="btn btn-outline-info my-2 addtocart" data-name="{{$package->name}}" data-price="{{$package->price}}">Booking Now</a> --}}
-            <input type="submit" name="" value="book" class="btn btn-outline-dark">
+            <input type="submit" name="" value="book" class="btn btn-outline-dark" id="book">
           </div>
           </form>
         </div>
@@ -111,6 +120,16 @@
 </div>
 @endsection
 @section('script')
+<script type="text/javascript">
+ 
+   var msg = 'Your total cost is ${{Session::get('alert')}}!';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+       swal(msg,"Confirm Booking", "success");
+       // location.href="/";
+    }
 
-<script src="{{asset('frontend/script.js')}}"></script>
+  
+</script>
+{{-- <script src="{{asset('frontend/script.js')}}"></script> --}}
 @endsection
